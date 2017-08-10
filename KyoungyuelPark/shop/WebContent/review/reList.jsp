@@ -39,7 +39,7 @@
 				%>
 				<tr>
 					<td><%=list.get(i).getreNum()%></td>
-					<td><a href="view.jsp?reNum=<%=list.get(i).getreNum()%>"><%=list.get(i).getreTitle()%></a></td>
+					<td><a href="view.jsp?reNum=<%=list.get(i).getreNum()%>"><%=list.get(i).getreContents()%></a></td>
 					<td><%=list.get(i).getreName()%></td>
 					<td><%=list.get(i).getreDate().substring(0, 11) + list.get(i).getreDate().substring(11, 13) + "시"
 						+ list.get(i).getreDate().substring(14, 16) + "분"%></td>

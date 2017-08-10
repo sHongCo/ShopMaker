@@ -14,7 +14,7 @@ public class DAO {
 
 	public DAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/barony";
+			String dbURL = "jdbc:mysql://localhost:3306/shop";
 			String dbID = "root";
 			String dbPassword = "1234";
 			Class.forName("com.mysql.jdbc.Driver");

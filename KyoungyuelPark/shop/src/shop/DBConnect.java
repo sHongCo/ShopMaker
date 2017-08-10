@@ -10,16 +10,16 @@ public class DBConnect {
 		String id = "root";
 		String pass = "1234";
 		
-		Connection con = null;
+		Connection conn = null;
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection(url,id,pass);
+			conn = DriverManager.getConnection(url,id,pass);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return con;
+		return conn;
 	}
-	
+
 }
