@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+
 public class UserDAO {
 
 	private static Connection conn;
@@ -60,7 +62,7 @@ public class UserDAO {
 		}
 		return -1;
 	}
-	//public boolean idChk(String uId){
-		
-	//}
+	// public boolean idChk(String uId){
+
+	// }
 }
