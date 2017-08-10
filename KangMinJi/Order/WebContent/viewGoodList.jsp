@@ -1,3 +1,14 @@
+<%
+/**
+ * @author 강민지
+ * @date 17.08.10
+ * @File viewGoodList.jsp
+ * 
+ * 판매목록 페이지(상품 고를 때 첫 화면)
+ * -> viewGood(상세페이지)로 이동.
+ */
+ 
+ %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <jsp:useBean id="pvo" class="data.PVO" scope="page" />

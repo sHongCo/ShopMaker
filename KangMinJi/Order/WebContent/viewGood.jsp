@@ -1,3 +1,14 @@
+<%
+/**
+ * @author 강민지
+ * @date 17.08.10
+ * @File viewGood.jsp
+ * 
+ * viewGood(상세페이지)
+ * -> 바로주문하기 탭으로 이동
+ */
+ 
+ %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <jsp:useBean id="pvo" class="data.PVO" scope="page" />
@@ -13,20 +24,6 @@ System.out.println(pNum);
 DAO dao = new DAO();
 pvo = dao.getProduct(pNum);
 %>
-	
-	<script type="text/javascript">
-
-	function getpNumTest() {
-		System.out.println("??????????????????????????????????????????");
-	}
-
-
-</script>
-
-
-
-
-
 
 <h1>제품 정보</h1>
 <br />
