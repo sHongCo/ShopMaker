@@ -1,0 +1,56 @@
+/************************************************* 
+*
+*                    COMMON              
+*
+***************************************************/
+* {margin:0; padding:0; list-style:none; text-decoration:none; font-family:"Nanum Gothic"; }
+ul>li>a { text-decoration:none; }
+a { color:#666666;}
+h1 { color:#444; font-size:26px; font-weight:600; padding-bottom:20px; }
+h2 { color:#444; font-size:18px; font-weight:600; margin-top:60px; border-bottom:2px solid #666; line-height:40px; }
+h3 { color:#666; font-size:16px; font-weight:600; }
+h4 { color:#666; font-size:14px; font-weight:600; }
+
+.bgff4b5c { background:#ff4b5c !important; }
+.bg979797 { background:#979797 !important; }
+.co6393b4 { color:#6393b4 !important; }
+
+
+/************************************************* 
+*
+*                    FONT              
+*
+***************************************************/
+.font_cate 		{ font-size:12px; font-weight:600; color:#6393b4; }
+.font_userId 	{ font-size:12px; font-weight:600; color:#666; }
+.font_hit 		{ font-size:12px; font-weight:600; color:#666;}
+.font_price		{ font-size:18px !important; font-weight:600 !important; color:#ff4b5c !important; }
+.font_subject 	{ font-size:14px; font-weight:600; color:#666;  }
+.font_contents	{ font-size:13px; font-weight:   ; color:#888;  }
+.font_contents2	{ font-size:13px; font-weight:600; color:#666;  }
+
+/************************************************* 
+*
+*                    LAYOUT              
+*
+***************************************************/
+
+.tabs { width:99.8%; height:60px; /* margin:20px auto; */ margin-bottom: 20px; border:1px solid #c6c6c6; overflow:hidden; }
+.tabs li { width:24.9%; float:left; text-align:center; line-height:60px; border-right:1px solid #c6c6c6; }
+.tabs li:last-child { width:25%; border-right:none; }
+.tabs li a { display: block; color:#666; font-size:18px; font-weight:600; }
+.tabs li.active { background: #2d9fee; color:#ffffff;}
+.tabs li.active a { color:#ffffff; }
+
+.tab_container { clear:both; float:left; width:100%; background: #fff; padding-bottom:50px; }
+.tab_content { width:1000px; margin:0 auto; /*overflow:hidden;*/}
+.tab_content li { position:relative; border:1px solid #c6c6c6; width:318px; height:380px; float:left; margin:0 20px 20px 0; /*overflow:hidden;*/ }
+.tab_content li:nth-child(3n+3){ margin-right:0px; }
+.ml_Img { display:block; height:209px; }
+.ml_Menu { margin:20px 0 0 10px; }
+.ml_Hit { position:absolute; top:229px; right:10px; }
+.ml_Title { display:block; margin:28px 0 0 10px; word-break:keep-all;}
+.ml_Price { display:block;  margin:10px 0 0 10px; }
+.ml_Name { position:absolute; margin-left:10px; bottom:14px; }
+.main_listStar { position:absolute; bottom:14px; right:10px; font-size:12px; font-weight:600;	color:#666; }
+.main_list_id {padding: 3px; font-size: 14px;}
