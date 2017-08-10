@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
 	<table>
 	<tr>
-	<h1>цЮгогу╢о╢ы</h1>
+	<h1>Л╤∙М∙≤М∙╘К▀┬К▀╓</h1>
 	<tr>
 	<tr>
-	<h3> х╦©Ь╟║ютюл ©о╥А╣г╬З╫ю╢о╢ы </h3>
+	<h3> М ▄Л⌡░Й╟─Л·┘Л²╢ Л≥└Кё▄К░≤Л≈┬Л┼╣К▀┬К▀╓ </h3>
 	</tr>
 	<tr>
-	<li><a href="main.jsp">х╗ю╦╥н</a></li>
+	<li><a href="main.jsp">М≥┬Л°╪К║°</a></li>
 	</tr>
 	</table>
 	
