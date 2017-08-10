@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+
 public class UserDAO {
 
 	private static Connection conn;
@@ -60,7 +62,47 @@ public class UserDAO {
 		}
 		return -1;
 	}
-	//public boolean idChk(String uId){
-		
-	//}
+	//////////////////////회원정보 조회///////////////////
+	public UVO getUserInfo(String uId) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		UVO uvo = new UVO();
+		try {
+			String sql = "SELECT * from user where uId=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, uId);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				uvo.setuId(rs.getString(1));
+				uvo.setuName(rs.getString(2));
+				uvo.setuPhone(rs.getString(3));
+				uvo.setuMail1(rs.getString(4));
+				uvo.setuMail2(rs.getString(5));
+				uvo.setuAdd(rs.getString(6));
+				System.out.println("끝!");				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return uvo;
+	}
+	
+	//////////////////////////////////////////
+	public int update(UVO UVO){
+		String SQL = "update user set uId=?, uPass=?, uName=?, uPhone=?, uMail1=?,uMail2=?,uAdd=? where uId=?";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, UVO.getuId());
+			pstmt.setString(2, UVO.getuPass());
+			pstmt.setString(3, UVO.getuName());
+			pstmt.setString(4, UVO.getuPhone());
+			pstmt.setString(5, UVO.getuMail1());
+			pstmt.setString(6, UVO.getuMail2());
+			pstmt.setString(7, UVO.getuAdd());
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }
