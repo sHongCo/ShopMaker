@@ -24,7 +24,7 @@ public class DAO {
 		}
 	}
 	
-	public int getNext() {
+	public int getNext() { //리뷰글 자동으로 번호증가
 		String SQL = "SELECT * FROM product ORDER BY pNum DESC";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -39,7 +39,7 @@ public class DAO {
 		return -1; // 데이터베이스 오류
 	}
 	
-	public String getDate() {
+	public String getDate() { //리뷰글 작성시  시스템 시간 제공
 		String SQL = "SELECT NOW()";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -53,7 +53,7 @@ public class DAO {
 		return ""; // 데이터베이스 오류
 	}
 
-	public ArrayList<REVO> getList(int pageNumber) {
+	public ArrayList<REVO> getList(int pageNumber) { //리뷰글 리스트 출력
 		String SQL = "SELECT * FROM review WHERE reNum < ? ORDER BY reNum DESC LIMIT 10";
 		ArrayList<REVO> list = new ArrayList<REVO>();
 		try {
@@ -76,7 +76,7 @@ public class DAO {
 		return list;
 	}
 	
-	public int write(String reContents, String uId) {
+	public int write(String reContents, String uId) { //리뷰글 입력시 글 번호, 내용, 아이디, 시간 출력
 		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, ?, ?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
