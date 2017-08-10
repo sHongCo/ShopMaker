@@ -44,7 +44,7 @@
 	<h1 class="bor_btm266 m_bottom20">주문 내역</h1>
 
 	<!--  세번째 -->
-	<form action="??" method="post">
+	<form action="ordersForm.jsp" method="post">
 
 		<table width="800" border="1">
 
@@ -77,29 +77,33 @@
 			<tr>
 				<td>주문상품이름</td>
 				<td colspan="3"><%=ovo2.getoProduct()%></td>
+				<input type=hidden name=oProduct value="<%=ovo2.getoProduct()%>">
+				
 			</tr>
 			<tr>
 				<td>주문상품가격</td>
 				<td colspan="3"><%=ovo2.getoPrice()%> 원</td>
+					<input type=hidden name=oPrice value="<%=ovo2.getoPrice()%>">
 			</tr>
 
 			<tr>
 				<td>주문수량</td>
 				<td colspan="3"><%=ovo2.getoQuan()%> 개</td>
+				<input type=hidden name=oQuan value="<%=ovo2.getoQuan()%>">
 			</tr>
 
 
 			<tr>
 				<td>주문날짜</td>
 				<td colspan="3"><%=ovo2.getoDate()%></td>
-			</tr>
+		</tr>
 
 			<%
 				}
 			%>
 
 		</table>
-		<input type="submit" value="">
+		<input type="submit" value="ordersForm.jsp">
 	</form>
 
 </body>
