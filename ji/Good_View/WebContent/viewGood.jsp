@@ -7,8 +7,7 @@
 <%
     		DAO dao = new DAO();
     		ArrayList<PVO> list = dao.getList(1);			
-%>
-<jsp:useBean id="shop" class="shop.PVO" scope="page" />    
+%> 
 <h1> 제품 정보</h1>
 <br>
 <table border=1 width="700" cellspacing=0>
