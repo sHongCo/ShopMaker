@@ -6,11 +6,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
 <%@ page import="java.util.ArrayList"%>
-<script>
-function doAct(){
-	
-}
-</script>
+
 <%
 		Object id;
 		String uid="BBEBBE";

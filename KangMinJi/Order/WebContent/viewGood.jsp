@@ -1,66 +1,78 @@
-<%
-/**
- * @author °­¹ÎÁö
- * @date 17.08.10
- * @File viewGood.jsp
- * 
- * viewGood(»ó¼¼ÆäÀÌÁö)
- * -> ¹Ù·ÎÁÖ¹®ÇÏ±â ÅÇÀ¸·Î ÀÌµ¿
- */
- 
- %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<jsp:useBean id="pvo" class="data.PVO" scope="page" />
+<!-- ì œí’ˆ ìƒì„¸í¬ê¸° íŽ˜ì´ì§€ / Good -> Goods / í¬ë§ì£¼ë¬¸ëŸ‰ text -> Scroll -->
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%-- <jsp:useBean id="shop" class="shop.PVO" scope="page" /> --%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
-
-
- 
+	 <body>
+	 	<%@ include file="header.jsp" %>
 <%
-int pNum = Integer.parseInt(request.getParameter("pNum"));
-System.out.println(pNum);
-DAO dao = new DAO();
-pvo = dao.getProduct(pNum);
+	int pNum = Integer.parseInt(request.getParameter("pNum"));
+
+	System.out.println("int pNum Good.jsp pNum : " + pNum); // 1
+
+	DAO dao = new DAO();
+	PVO pvo = dao.getNum(pNum);
 %>
 
-<h1>Á¦Ç° Á¤º¸</h1>
+<h1 class="bor_btm266 m_bottom20">ìƒì„¸ë³´ê¸°</h1>
 <br />
-<table border=1 width="700px" cellspacing=0>
+<form action="wishList2.jsp" method="post">
 
-<form method=post action="orderForm.jsp">
-	<tr>
-		<td width="150">Á¦Ç° ID¹øÈ£</td>
-		<td colspan="3"><%=pvo.getpNum()%></td>
-		<input type=hidden name=pNum value="<%=pvo.getpNum()%>"> 
-	</tr>
-	<tr>
-		<td>Á¦Ç°¸í</td>
-		<td colspan="3"><%=pvo.getpProduct()%></td>
-		<input type=hidden name=pProduct value="<%=pvo.getpProduct()%>">
-	</tr>
-	<tr>
-		<td>°¡°Ý</td>
-		<td colspan="3"><%=pvo.getpPrice()%>¿ø</td>
-		<input type=hidden name=pPrice value="<%=pvo.getpPrice()%>">
-	</tr>
-	<tr>
-		<td>Àç°í·®</td>
-		<td colspan="3"><%=pvo.getpQuan()%>°³</td>
-	</tr>
 
-	<tr>
-		<td>Èñ¸Á ÁÖ¹®·®</td>
-		<td colspan="3"><input type="text" name="oQuan">°³</td>
-	</tr>
-	<tr>
-		<td>»çÁø</td>
-		<td colspan="3"><img src="images/1.jpg" width="360ox"
-			height="360px"></td>
-	</tr>
-</table>
-	 <input	type=submit value="ÁÖ¹®ÇÏ±â">
- 	 <input type="button" value="»óÇ°¸ñ·ÏÀ¸·Î µ¹¾Æ°¡±â" onClick="location.href='viewGoodList.jsp'";>
+
+
+
+	<table border=1 width="700px" cellspacing=0>
+
+
+
+
+		<tr>
+			<td width="150">ì œí’ˆ IDë²ˆí˜¸</td>
+			<td colspan="3"><%=pNum%></td>
+		</tr>
+		<tr>
+			<td>ì œí’ˆëª…</td>
+			<td colspan="3"><%=pvo.getpProduct()%></td>
+		</tr>
+		<tr>
+			<td>ê°€ê²©</td>
+			<td colspan="3"><%=pvo.getpPrice()%>ì›</td>
+		</tr>
+		<tr>
+			<td>ìž¬ê³ ëŸ‰</td>
+			<td colspan="3"><%=pvo.getpQuan()%>ê°œ</td>
+		</tr>
+
+		<tr>
+
+			<td>í¬ë§ ì£¼ë¬¸ëŸ‰</td>
+			<td colspan="3"><input type="text" name="oQuan">ê°œ</td>
+
+
+		</tr>
+
+		<tr>
+			<td>ì‚¬ì§„</td>
+			<td colspan="3"><img src="images/1.jpg" width="360px"
+				height="360px"></td>
+		</tr>
+	</table>
+	<br>
+
+	<input type=hidden name=pProduct value="<%=pvo.getpProduct()%>">
+	<input type=hidden name=pPrice value="<%=pvo.getpPrice()%>">
+
+	<!-- 1ìˆ˜ì • -->
+	<input type="hidden" name=pNum value="<%=pNum%>">
+
+
+	<input type=submit value="ìž¥ë°”êµ¬ë‹ˆ í™•ì¸" > <input type="button"
+		value="ìƒí’ˆëª©ë¡ìœ¼ë¡œ ëŒì•„ê°€ê¸°" onClick="location.href='viewGoodList.jsp'">
+
 </form>
-<br>
+</body>
