@@ -15,13 +15,22 @@ public class DAO {
 
 	private Connection conn;
 	private ResultSet rs;
+	String sql = "";
 
 	private static DAO instance = new DAO();
 
 	public static DAO getDao() {
 		return instance;
 	}
+	
+	public String pasing(String data) {
+		try {
+			data = new String(data.getBytes("8859_1"), "euc-kr");
+		} catch (Exception e) {
+		}
 
+		return data;
+	}
 
 	public DAO() {
 		try {
@@ -38,55 +47,98 @@ public class DAO {
 	
 	
 	
+	
+	
+	public OVO getOrder(int oNum) {
+		PreparedStatement pstmt = null;
+		OVO ovo = new OVO();
+		try {
+			String sql = "SELECT * from `order` where oNum=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, oNum);
+			
+			System.out.println("시작"+oNum);
+			rs = pstmt.executeQuery();
+			System.out.println("전송");
+			while (rs.next()) {				
+				ovo.setoNum(rs.getInt(1));
+				ovo.setoName(rs.getString(2));
+				ovo.setoId(rs.getString(3));
+				ovo.setoPhone(rs.getString(4));
+				ovo.setoAdd(rs.getString(5));
+				ovo.setoProduct(rs.getString(6));
+				ovo.setoQuan(rs.getInt(7));
+				ovo.setoDate(rs.getTimestamp(8));
+				ovo.setoPrice(rs.getInt(9));
+				System.out.println("완료");
+			}
+		} catch (Exception e) {
+		} finally {
+			DBClose.close(conn, pstmt, rs);
+		}
+		return ovo;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public void insertOrder(OVO vo) {
 	
-
+		
 		try {
-			PreparedStatement pstmt = null;
-			String sql = "INSERT INTO `shop`.`order` ( `oName`, `oId`, `oPhone`, `oAdd`, `oProduct`, `oQuan`, `oDate`, `oPrice`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?);";
-			pstmt = conn.prepareStatement(sql);
+			
+			sql = "INSERT INTO `barony`.`order` ( `oName`, `oId`, `oPhone`, `oAdd`, `oProduct`, `oQuan`,  `oPrice`) VALUES ( ?, ?, ?, ?, ?, ?, ?);";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, pasing(vo.getoName()));
 			pstmt.setString(2, vo.getoId());
 			pstmt.setString(3, vo.getoPhone());
 			pstmt.setString(4, pasing(vo.getoAdd()));
 			pstmt.setString(5, pasing(vo.getoProduct()));
 			pstmt.setInt(6, vo.getoQuan());
-			pstmt.setTimestamp(7, vo.getoDate());
-			pstmt.setInt(8, vo.getoPrice());
+		//	pstmt.setTimestamp(7, vo.getoDate());
+			pstmt.setInt(7, vo.getoPrice());
             pstmt.executeUpdate();
-           
+           System.out.println("DAO insertOrder 얘 노는거같은데");
+            
             sql= "SELECT max(oNum) from `order`;";
-            pstmt = con.prepareStatement(sql);
+            pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
+            System.out.println("DAO insertOrder 얘는 같이놀고");
+            
             while(rs.next()){
             	vo.setoNum(rs.getInt(1));
             }
             
 		} catch (Exception e) {
 			System.out.println(vo.getoId());
-		} finally {
-			System.out.println(vo.getoDate());
-			DBClose.close(con, pstmt);
-		}
+		} 
 	}
 		
 	
-	public ArrayList<PVO> getProductList(String uid) {
-		ArrayList<PVO> alist = new ArrayList<PVO>();
+	public ArrayList<OVO> getProductList(String uid) {
+		ArrayList<OVO> alist = new ArrayList<OVO>();
 		System.out.println("시작");
 		try {
-			PreparedStatement pstmt = null;
 			String sql = "SELECT `dname`,`dcount`,`dprice` from `new_table` where did=?";
-			pstmt = conn.prepareStatement(sql);
+			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, uid);
 			rs = pstmt.executeQuery();
 			System.out.println("조회");
 			while (rs.next()) {
-				PVO pvo = new PVO();
-				pvo.setpProduct(rs.getString(1));
-				pvo.setpQuan(rs.getInt(2));
-				pvo.setpPrice(rs.getInt(3));
-				alist.add(pvo);
+				OVO ovo = new OVO();
+				ovo.setoProduct(rs.getString(1));
+				ovo.setoQuan(rs.getInt(2));
+				ovo.setoPrice(rs.getInt(3));
+				alist.add(ovo);
 			}
 		} catch (Exception e) {
 		} 

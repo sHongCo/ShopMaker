@@ -76,7 +76,8 @@
 <script type="text/javascript">
   function mySubmit(index) {
     if (index == 1) {
-      document.myForm.action='order.jsp';
+    //  document.myForm.action='order.jsp';
+    	  document.myForm.action='ordersForm.jsp';
     }
     if (index == 2) {
       document.myForm.action='deleteCheck.jsp';
@@ -144,12 +145,7 @@
 	   <input type="button" value="»èÁ¦" onclick='mySubmit(2)'>
 	  </form>
 	  
-	  
-	  <%
-	  String []checksNum = request.getParameterValues("checks");
-	  
-	  
-	  %>
+	
 	  
 	  
 	  
