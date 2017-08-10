@@ -71,9 +71,8 @@
 			>
 			<tr>
 				<td>이메일</td>
-				<td><input type="text" placeholder="이메일" name="uMail1"
-						maxlengh="20">@<input type="text" placeholder="이메일2"
-						name="uMail2" maxlengh="20"></td>
+				<td><input type="text" placeholder="이메일" name="uMail"
+						maxlengh="20">
 			</tr>
 			<tr>
 				<td>주소</td>

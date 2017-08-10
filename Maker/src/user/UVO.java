@@ -2,14 +2,12 @@ package user;
 
 public class UVO {
 
-
 	private String uId;
 	private String uPass;
 	private String uPass2;
 	private String uName;
 	private String uPhone;
-	private String uMail1;
-	private String uMail2;
+	private String uMail;
 	private String uAdd;
 
 	public String getuId() {
@@ -44,20 +42,12 @@ public class UVO {
 		this.uName = uName;
 	}
 
-	public String getuMail1() {
-		return uMail1;
+	public String getuMail() {
+		return uMail;
 	}
 
-	public void setuMail1(String uMail1) {
-		this.uMail1 = uMail1;
-	}
-
-	public String getuMail2() {
-		return uMail2;
-	}
-
-	public void setuMail2(String uMail2) {
-		this.uMail2 = uMail2;
+	public void setuMail(String uMail1) {
+		this.uMail = uMail1;
 	}
 
 	public String getuPhone() {

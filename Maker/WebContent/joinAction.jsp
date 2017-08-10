@@ -63,7 +63,7 @@
 			script.println("history.back()");
 			script.println("</script>");
 		}
-		if (UVO.getuMail1() == null || UVO.getuMail2() == null) {
+		if (UVO.getuMail() == null) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('이메일을 입력해주세요')");

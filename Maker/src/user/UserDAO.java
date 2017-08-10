@@ -46,16 +46,15 @@ public class UserDAO {
 	public int join(UVO UVO) {
 
 		PreparedStatement pstmt = null;
-		String SQL = "insert into user values(?,?,?,?,?,?,?)";
+		String SQL = "insert into user values(?,?,?,?,?,?)";
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, UVO.getuId());
 			pstmt.setString(2, UVO.getuPass());
 			pstmt.setString(3, UVO.getuName());
 			pstmt.setString(4, UVO.getuPhone());
-			pstmt.setString(5, UVO.getuMail1());
-			pstmt.setString(6, UVO.getuMail2());
-			pstmt.setString(7, UVO.getuAdd());
+			pstmt.setString(5, UVO.getuMail());
+			pstmt.setString(6, UVO.getuAdd());
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -76,9 +75,8 @@ public class UserDAO {
 				uvo.setuId(rs.getString(1));
 				uvo.setuName(rs.getString(2));
 				uvo.setuPhone(rs.getString(3));
-				uvo.setuMail1(rs.getString(4));
-				uvo.setuMail2(rs.getString(5));
-				uvo.setuAdd(rs.getString(6));
+				uvo.setuMail(rs.getString(4));
+				uvo.setuAdd(rs.getString(5));
 				System.out.println("³¡!");				
 			}
 		} catch (Exception e) {
@@ -89,16 +87,15 @@ public class UserDAO {
 	
 	//////////////////////////////////////////
 	public int update(UVO UVO){
-		String SQL = "update user set uId=?, uPass=?, uName=?, uPhone=?, uMail1=?,uMail2=?,uAdd=? where uId=?";
+		String SQL = "update user set uId=?, uPass=?, uName=?, uPhone=?, uMail=?,uAdd=? where uId=?";
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, UVO.getuId());
 			pstmt.setString(2, UVO.getuPass());
 			pstmt.setString(3, UVO.getuName());
 			pstmt.setString(4, UVO.getuPhone());
-			pstmt.setString(5, UVO.getuMail1());
-			pstmt.setString(6, UVO.getuMail2());
-			pstmt.setString(7, UVO.getuAdd());
+			pstmt.setString(5, UVO.getuMail());
+			pstmt.setString(6, UVO.getuAdd());
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
