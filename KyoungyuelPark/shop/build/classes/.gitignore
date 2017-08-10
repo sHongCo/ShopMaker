@@ -1,1 +1,15 @@
-/shop/
+/src/
+/bbs.jsp
+/comp.jsp
+/index.jsp
+/join.jsp
+/joinAction.jsp
+/login.jsp
+/loginAction.jsp
+/logoutAction.jsp
+/main.jsp
+/reList.jsp
+/reWriteAct.jsp
+/bbs/
+/re/
+/user/

@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter"%>
-<%@ page import="shop.DAO"%>
-<%@ page import="shop.REVO"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="re.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,10 +38,9 @@
 				%>
 				<tr>
 					<td><%=list.get(i).getreNum()%></td>
-					<td><a href="view.jsp?reNum=<%=list.get(i).getreNum()%>"><%=list.get(i).getreContents()%></a></td>
+					<td><a href="view.jsp?reNum=<%=list.get(i).getreNum()%>"><%=list.get(i).getreTitle()%></a></td>
 					<td><%=list.get(i).getreName()%></td>
-					<td><%=list.get(i).getreDate().substring(0, 11) + list.get(i).getreDate().substring(11, 13) + "시"
-						+ list.get(i).getreDate().substring(14, 16) + "분"%></td>
+					<td><%=list.get(i).getreDate()%></td>
 				</tr>
 				<%
 					}
@@ -53,7 +51,7 @@
 	<form method="post" action="reWriteAct.jsp">
 		<div>
 			<input type="text" placeholder="한 줄 리뷰" maxlength="50"> <input
-				type="submit" value="글 쓰기">
+				name="reContent" type="submit" value="쓰기">
 		</div>
 	</form>
 </body>

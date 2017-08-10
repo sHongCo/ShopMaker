@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="shop.DAO"%>
+<%@ page import="re.*"%>
 <%@ page import="java.io.PrintWriter"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
-<jsp:useBean id="REVO" class="shop.REVO" scope="page" />
+<jsp:useBean id="REVO" class="re.REVO" scope="page" />
 <jsp:setProperty name="REVO" property="reContents" />
 <!DOCTYPE html>
 <html>
@@ -34,7 +34,7 @@
 				script.println("</script>");
 			} else {
 				DAO dao = new DAO();
-				int result = dao.write(REVO.getreContents(), uId);
+				int result = dao.write(REVO.getreContents(), dao.getreName(), REVO.getreDate());
 				if (result == -1) {
 					PrintWriter script = response.getWriter();
 					script.println("<script>");

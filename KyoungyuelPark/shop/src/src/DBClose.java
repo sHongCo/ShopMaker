@@ -1,4 +1,4 @@
-package shop;
+package src;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class DBClose {
 
-	public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
+	public static void close(Connection con, PreparedStatement pstmt, ResultSet rs) {
 
 		if (rs != null) {
 			try {
@@ -30,10 +30,10 @@ public class DBClose {
 			}
 		}
 
-		if (conn != null) {
+		if (con != null) {
 			try {
-				conn.close();
-				conn = null;
+				con.close();
+				con = null;
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -42,7 +42,7 @@ public class DBClose {
 
 	}
 
-	public static void close(Connection conn, PreparedStatement pstmt) {
+	public static void close(Connection con, PreparedStatement pstmt) {
 
 		if (pstmt != null) {
 			try {
@@ -54,18 +54,18 @@ public class DBClose {
 			pstmt = null;
 		}
 
-		if (conn != null) {
+		if (con != null) {
 			try {
-				conn.close();
+				con.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = null;
+			con = null;
 		}
 	}
 
-	public static void close(Connection conn, Statement stmt) {
+	public static void close(Connection con, Statement stmt) {
 
 		if (stmt != null) {
 			try {
@@ -77,27 +77,27 @@ public class DBClose {
 			stmt = null;
 		}
 
-		if (conn != null) {
+		if (con != null) {
 			try {
-				conn.close();
+				con.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = null;
+			con = null;
 		}
 	}
 
-	public static void close(Connection conn) {
+	public static void close(Connection con) {
 
-		if (conn != null) {
+		if (con != null) {
 			try {
-				conn.close();
+				con.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = null;
+			con = null;
 		}
 	}
 
