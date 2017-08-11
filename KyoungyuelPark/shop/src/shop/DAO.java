@@ -13,7 +13,7 @@ public class DAO {
 
 	public DAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/barony";
+			String dbURL = "jdbc:mysql://localhost:3306/shop";
 			String dbID = "root";
 			String dbPassword = "1234";
 			Class.forName("com.mysql.jdbc.Driver");
@@ -27,7 +27,7 @@ public class DAO {
 
 	// 리뷰 리스트 출력
 	public ArrayList<REVO> getReList() {
-		String SQL = "SELECT * FROM 'review'";
+		String SQL = "SELECT * FROM review";
 		ArrayList<REVO> list = new ArrayList<REVO>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -48,8 +48,8 @@ public class DAO {
 	}
 
 	// 리뷰 입력
-	public void writeReview(REVO revo, String reId, String reContents, Timestamp reDate, int rePoint) {
-		String SQL = "INSERT INTO 'shop'.'review' ('reContents', 'reId', 'rePoint') VALUES(?,?,?)";
+	public int writeReview(String reContents, String reId, int rePoint) {
+		String SQL = "INSERT INTO review (reContents, reId, rePoint) VALUES(?,?,?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, reContents);
@@ -59,5 +59,6 @@ public class DAO {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return -1;
 	}
 }

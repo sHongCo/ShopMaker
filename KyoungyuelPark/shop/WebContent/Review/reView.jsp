@@ -23,7 +23,8 @@
 					<th>번호</th>
 					<th>제목</th>
 					<th>작성자</th>
-					<th>작성일</th>
+					<th>작성시간</th>
+					<th>평점</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -48,8 +49,10 @@
 	<div>
 		<form method="post" action="reWriteAct.jsp">
 			<input type="text" class="form-control" placeholder="한 줄 리뷰"
-				name="reContents" maxlength="128"> <input type="button"
-				class="btn btn-primary" value="확인">
+				name="reContents" maxlength="128"> <input type="text"
+				class="form-control" placeholder="평점" name="rePoint"
+				maxlength="1"> <input type="button" class="btn btn-primary"
+				value="확인">
 		</form>
 	</div>
 </body>
