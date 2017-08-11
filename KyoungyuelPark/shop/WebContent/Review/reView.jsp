@@ -10,6 +10,28 @@
 <title>Review</title>
 </head>
 <body>
+	<!-- Tocplus 15.1 -->
+	<script type="text/javascript">
+		tocplusTop = 1150;
+		tocplusLeft = 5;
+		tocplusMinimizedImage = 'http://kr07.tocplus007.com/img/minimized_ko.gif';
+		tocplusHAlign = 'right';
+		tocplusWidth = 180;
+		tocplusHeight = 220;
+		tocplusUserName = '손님';
+		tocplusFrameColor = '#e6e6e6';
+		tocplusFloatingWindow = true;
+		var tocplusHost = (("https:" == document.location.protocol) ? "https://"
+				: "http://");
+		document
+				.write(unescape("%"
+						+ "3Cscript src='"
+						+ tocplusHost
+						+ "kr07.tocplus007.com/chatLoader.do?userId=qkr4347' type='text/javascript'"
+						+ "%" + "3E" + "%" + "3C/script" + "%" + "3E"));
+	</script>
+	<!-- End of Tocplus -->
+
 	<%
 		String uId = null;
 		if (session.getAttribute("uId") != null) {
@@ -50,9 +72,8 @@
 		<form method="post" action="reWriteAct.jsp">
 			<input type="text" class="form-control" placeholder="한 줄 리뷰"
 				name="reContents" maxlength="128"> <input type="text"
-				class="form-control" placeholder="평점" name="rePoint"
-				maxlength="1"> <input type="button" class="btn btn-primary"
-				value="확인">
+				class="form-control" placeholder="평점" name="rePoint" maxlength="1">
+			<input type="button" class="btn btn-primary" value="확인">
 		</form>
 	</div>
 </body>
