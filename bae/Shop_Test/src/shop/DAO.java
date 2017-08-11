@@ -15,7 +15,7 @@ public class DAO {
 
 	private Connection conn;
 	private ResultSet rs;
-	String sql = "";
+
 
 	private static DAO instance = new DAO();
 
@@ -96,7 +96,7 @@ public class DAO {
 		
 		try {
 			
-			sql = "INSERT INTO `barony`.`order` ( `oName`, `oId`, `oPhone`, `oAdd`, `oProduct`, `oQuan`,  `oPrice`) VALUES ( ?, ?, ?, ?, ?, ?, ?);";
+			String sql = "INSERT INTO `barony`.`order` ( `oName`, `oId`, `oPhone`, `oAdd`, `oProduct`, `oQuan`,  `oPrice`) VALUES ( ?, ?, ?, ?, ?, ?, ?);";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, pasing(vo.getoName()));
 			pstmt.setString(2, vo.getoId());

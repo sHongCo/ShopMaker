@@ -3,9 +3,8 @@ package shop;
 public class REVO {
 
 	private int reNum;
-	private String reTitle;
 	private String reContents;
-	private String reName;
+	private String reId;
 	private String reDate;
 	private int rePoint;
 
@@ -13,11 +12,10 @@ public class REVO {
 
 	}
 
-	public REVO(int reNum, String reTitle, String reContents, String reName, String reDate, int rePoint) {
+	public REVO(int reNum,  String reContents, String reId, String reDate, int rePoint) {
 		this.reNum = reNum;
-		this.reTitle = reTitle;
 		this.reContents = reContents;
-		this.reName = reName;
+		this.reId = reId;
 		this.reDate = reDate;
 		this.rePoint = rePoint;
 	}
@@ -30,12 +28,12 @@ public class REVO {
 		this.reNum = reNum;
 	}
 
-	public String getreTitle() {
-		return reTitle;
+	public String getreId() {
+		return reId;
 	}
 
-	public void setreTitle(String reTitle) {
-		this.reTitle = reTitle;
+	public void setreId(String reId) {
+		this.reId = reId;
 	}
 
 	public String getreContents() {
@@ -52,14 +50,6 @@ public class REVO {
 
 	public void setreDate(String reDate) {
 		this.reDate = reDate;
-	}
-
-	public String getreName() {
-		return reName;
-	}
-
-	public void setreName(String reName) {
-		this.reName = reName;
 	}
 
 	public int getrePoint() {
