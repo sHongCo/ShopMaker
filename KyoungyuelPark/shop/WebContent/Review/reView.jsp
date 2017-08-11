@@ -15,10 +15,6 @@
 		if (session.getAttribute("uId") != null) {
 			uId = (String) session.getAttribute("uId");
 		}
-		int pageNumber = 1;
-		if(request.getParameter("pageNumber") != null){
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-		}
 	%>
 	<div>
 		<table>
@@ -48,6 +44,13 @@
 				%>
 			</tbody>
 		</table>
+	</div>
+	<div>
+		<form method="post" action="reWriteAct.jsp">
+			<input type="text" class="form-control" placeholder="한 줄 리뷰"
+				name="reContents" maxlength="128"> <input type="button"
+				class="btn btn-primary" value="확인">
+		</form>
 	</div>
 </body>
 </html>

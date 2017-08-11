@@ -49,14 +49,13 @@ public class DAO {
 
 	// 리뷰 입력
 	public void writeReview(REVO revo, String reId, String reContents, Timestamp reDate, int rePoint) {
-		String SQL = "INSERT INTO shop.review (reContents, reId, rePoint) VALUES(?,?,?)";
+		String SQL = "INSERT INTO 'shop'.'review' ('reContents', 'reId', 'rePoint') VALUES(?,?,?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, reContents);
 			pstmt.setString(2, reId);
 			pstmt.setInt(3, rePoint);
 			pstmt.execute();
-			System.out.println("DAO inputData 실행 ");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
