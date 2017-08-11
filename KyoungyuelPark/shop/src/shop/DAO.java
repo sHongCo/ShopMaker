@@ -23,11 +23,11 @@ public class DAO {
 		}
 	}
 
-	// 세션의 로그인 아이디와 일치하는 계정의 정보를 리뷰DB에 입력하는 부분 추가해야 함
+	// 세션의 로그인 아이디와 일치하는 계정의 정보를 리뷰DB에 입력
 
 	// 리뷰 리스트 출력
 	public ArrayList<REVO> getReList() {
-		String SQL = "SELECT * FROM review";
+		String SQL = "SELECT * FROM 'review'";
 		ArrayList<REVO> list = new ArrayList<REVO>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);

@@ -10,6 +10,11 @@
 <title>Review</title>
 </head>
 <body>
-
+	<%
+		String uId = null;
+		if (session.getAttribute("uId") != null) {
+			uId = (String) session.getAttribute("uId");
+		}
+	%>
 </body>
 </html>
