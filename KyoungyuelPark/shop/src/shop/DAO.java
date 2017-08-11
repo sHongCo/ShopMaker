@@ -1,21 +1,19 @@
-package re;
+package shop;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
-import re.REVO;
-
 public class DAO {
-
 	private Connection conn;
 	private ResultSet rs;
 
 	public DAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/shop";
+			String dbURL = "jdbc:mysql://localhost:3306/barony";
 			String dbID = "root";
 			String dbPassword = "1234";
 			Class.forName("com.mysql.jdbc.Driver");
@@ -25,13 +23,11 @@ public class DAO {
 		}
 	}
 
-	// 로그인 정보에서 리플달 때 아이디를 따와야 함, 미완성
-	public String getreName() {
-		return null;
-	}
+	// 세션의 로그인 아이디와 일치하는 계정의 정보를 리뷰DB에 입력하는 부분 추가해야 함
 
-	public ArrayList<REVO> getList(int pageNumber) { // 리뷰글 리스트 출력
-		String SQL = "SELECT * FROM review WHERE reNum < ? ORDER BY reNum DESC LIMIT 10";
+	// 리뷰 리스트 출력
+	public ArrayList<REVO> getReList() {
+		String SQL = "SELECT * FROM review";
 		ArrayList<REVO> list = new ArrayList<REVO>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -40,8 +36,9 @@ public class DAO {
 				REVO revo = new REVO();
 				revo.setreNum(rs.getInt(1));
 				revo.setreContents(rs.getString(2));
-				revo.setreName(rs.getString(3));
-				revo.setreDate(rs.getString(4));
+				revo.setreId(rs.getString(3));
+				revo.reDate = rs.getTimestamp(4);
+				revo.setrePoint(rs.getInt(5));
 				list.add(revo);
 			}
 		} catch (Exception e) {
@@ -50,19 +47,18 @@ public class DAO {
 		return list;
 	}
 
-	public int write(String reContents, String reName, String reDate) { // 리뷰글 입력시 글 번호, 내용, 닉네임, 시간 출력
-		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, ?, ?)";
+	// 리뷰 입력
+	public void writeReview(REVO revo, String reId, String reContents, Timestamp reDate, int rePoint) {
+		String SQL = "INSERT INTO shop.review (reContents, reId, rePoint) VALUES(?,?,?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, 0);
-			pstmt.setString(2, reContents);
-			pstmt.setString(3, reName);
-			pstmt.setString(4, reDate);
-			pstmt.setInt(5, 1);
-			return pstmt.executeUpdate();
+			pstmt.setString(1, reContents);
+			pstmt.setString(2, reId);
+			pstmt.setInt(3, rePoint);
+			pstmt.execute();
+			System.out.println("DAO inputData 실행 ");
 		} catch (Exception e) {
-			e.printStackTrace();
+			// TODO: handle exception
 		}
-		return -1; // 데이터베이스 오류
 	}
 }

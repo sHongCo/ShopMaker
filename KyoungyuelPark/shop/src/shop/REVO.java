@@ -1,23 +1,23 @@
-package re;
+package shop;
+
+import java.sql.Timestamp;
 
 public class REVO {
 
 	private int reNum;
-	private String reTitle;
 	private String reContents;
-	private String reName;
-	private String reDate;
+	private String reId;
+	Timestamp reDate;
 	private int rePoint;
 
 	public REVO() {
 
 	}
 
-	public REVO(int reNum, String reTitle, String reContents, String reName, String reDate, int rePoint) {
+	public REVO(int reNum, String reContents, String reId, Timestamp reDate, int rePoint) {
 		this.reNum = reNum;
-		this.reTitle = reTitle;
 		this.reContents = reContents;
-		this.reName = reName;
+		this.reId = reId;
 		this.reDate = reDate;
 		this.rePoint = rePoint;
 	}
@@ -29,15 +29,7 @@ public class REVO {
 	public void setreNum(int reNum) {
 		this.reNum = reNum;
 	}
-
-	public String getreTitle() {
-		return reTitle;
-	}
-
-	public void setreTitle(String reTitle) {
-		this.reTitle = reTitle;
-	}
-
+	
 	public String getreContents() {
 		return reContents;
 	}
@@ -46,20 +38,20 @@ public class REVO {
 		this.reContents = reContents;
 	}
 
-	public String getreDate() {
+	public Timestamp getreDate() {
 		return reDate;
 	}
 
-	public void setreDate(String reDate) {
+	public void setreDate(Timestamp reDate) {
 		this.reDate = reDate;
 	}
 
-	public String getreName() {
-		return reName;
+	public String getreId() {
+		return reId;
 	}
 
-	public void setreName(String reName) {
-		this.reName = reName;
+	public void setreId(String reId) {
+		this.reId = reId;
 	}
 
 	public int getrePoint() {

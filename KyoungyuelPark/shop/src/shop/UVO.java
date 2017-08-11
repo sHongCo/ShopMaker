@@ -1,16 +1,35 @@
-package user;
-
+package shop;
 public class UVO {
 
-
+	private int uNum;
 	private String uId;
 	private String uPass;
-	private String uPass2;
 	private String uName;
 	private String uPhone;
-	private String uMail1;
-	private String uMail2;
+	private String uMail;
 	private String uAdd;
+	
+	public UVO() {
+		
+	}
+
+	public UVO(int uNum, String uId, String uPass, String uName, String uPhone, String uMail, String uAdd) {
+		this.uNum = uNum;
+		this.uId = uId;
+		this.uPass = uPass;
+		this.uName = uName;
+		this.uPhone = uPhone;
+		this.uMail = uMail;
+		this.uAdd = uAdd;
+	}
+
+	public int getuNum() {
+		return uNum;
+	}
+
+	public void setuNum(int uNum) {
+		this.uNum = uNum;
+	}
 
 	public String getuId() {
 		return uId;
@@ -28,36 +47,12 @@ public class UVO {
 		this.uPass = uPass;
 	}
 
-	public String getuPass2() {
-		return uPass2;
-	}
-
-	public void setuPass2(String uPass2) {
-		this.uPass2 = uPass2;
-	}
-
 	public String getuName() {
 		return uName;
 	}
 
 	public void setuName(String uName) {
 		this.uName = uName;
-	}
-
-	public String getuMail1() {
-		return uMail1;
-	}
-
-	public void setuMail1(String uMail1) {
-		this.uMail1 = uMail1;
-	}
-
-	public String getuMail2() {
-		return uMail2;
-	}
-
-	public void setuMail2(String uMail2) {
-		this.uMail2 = uMail2;
 	}
 
 	public String getuPhone() {
@@ -68,6 +63,14 @@ public class UVO {
 		this.uPhone = uPhone;
 	}
 
+	public String getuMail() {
+		return uMail;
+	}
+
+	public void setuMail(String uMail) {
+		this.uMail = uMail;
+	}
+
 	public String getuAdd() {
 		return uAdd;
 	}
@@ -75,5 +78,4 @@ public class UVO {
 	public void setuAdd(String uAdd) {
 		this.uAdd = uAdd;
 	}
-
 }
