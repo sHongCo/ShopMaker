@@ -1,10 +1,14 @@
+<!-- 
+상품리스트를 보여주는곳 / Good -> Goods / 이미지별로 사진 첨부 / Btn 이미지 수정
+ -->
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:useBean id="pvo" class="data.PVO" scope="page" />
-<%@ page import="java.sql.*"%>
-<%@ page import="java.util.*"%>
-<%@ page import="data.*"%>
-
+<jsp:useBean id="shop" class="data.PVO" scope="page" />
+<%@ page import="java.io.PrintWriter"%>
+<%@ page import="data.DAO"%>
+<%@ page import="data.PVO"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
@@ -17,6 +21,7 @@
 
 </head>
 <body>
+	 	<%@ include file="header.jsp" %>
 	<%
 		String pNum = null;
 		if (session.getAttribute("pNum") != null) {
@@ -29,13 +34,14 @@
 		
 		
 	%>
+	
 	<h1 class="bor_btm266 m_bottom20">판매목록</h1>
 	<table border="1">
 		<%
 			DAO dao = new DAO();
-			ArrayList<PVO> list = dao.getGoodList();
+			ArrayList<PVO> list = dao.getList(pageNumber);
 			for (int i = 0; i < list.size(); i++) {
-				pvo = list.get(i);
+				PVO pvo = list.get(i);
 		%>
 		<tr>
 			<th>제품 ID번호</th>
