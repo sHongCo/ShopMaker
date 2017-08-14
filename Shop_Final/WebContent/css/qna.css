@@ -1,0 +1,366 @@
+@CHARSET "UTF-8";
+
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Nanum Gothic";
+}
+
+#A_Container_Wrap {
+	width: 100%;
+	clear: both;
+}
+
+#A_Container {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	clear: both;
+	overflow: hidden;
+	min-height: 500px;
+}
+
+#A_Container_L { /* 占쏙옙占쏙옙 */
+	float: left;
+	width: 200px;
+	padding-right: 30px;
+}
+
+#A_Container_C { /* 占쏙옙占쏘데 */
+	width: 770px; /*占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占싸삼옙占쏙옙占쏙옙*/
+	float: left;
+	overflow: hidden;
+}
+
+.left_menu {
+	display: inline-block;
+	width: 198px;
+	border-left: 1px solid #c6c6c6;
+	border-right: 1px solid #c6c6c6;
+	border-bottom: 1px solid #c6c6c6;
+}
+
+.left_menu dl {
+	border-top: 1px solid #c6c6c6;
+}
+
+.left_menu dl a dt {
+	background: #efefef;
+	border-top: 1px solid #fff;
+	font-size: 14px;
+	font-weight: 600;
+	color: #666666;
+	line-height: 40px;
+	padding-left: 20px;
+}
+
+.left_menu dl a:nth-child(2) dd {
+	padding-top: 10px;
+}
+
+.left_menu dl a:last-child dd {
+	padding-bottom: 10px;
+}
+
+.left_menu dl a dd {
+	font-size: 12px;
+	font-weight: 600;
+	color: #888888;
+	line-height: 26px;
+	padding-left: 20px;
+}
+
+.left_menu dl a:hover dd, .left_menu dl a.on dd {
+	color: #0eade7;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.table_box {
+	margin-top: 10px;
+}
+
+.table_box table {
+	width: 100%;
+}
+
+.table_box th {
+	height: 50px;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 25px;
+	font-size: 16px;
+	color: #666666;
+	background: #f0f0f0;
+	border: 1px solid #d4d4d4;
+}
+
+.table_box td {
+	height: 30px;
+	vertical-align: middle;
+	padding: 10px 25px;
+	color: #666;
+	border: 1px solid #d4d4d4;
+}
+
+.table_box td.sum {
+	color: #cf000e;
+}
+
+.table_box td.sum span {
+	color: #cf000e;
+}
+
+.table_box td span {
+	vertical-align: middle;
+	display: inline-block;
+	font-weight: normal;
+}
+
+.tableList {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #d4d4d4;
+}
+
+.tableList th {
+	height: 42px;
+	padding-left: 0;
+	background: #f0f0f0;
+	text-align: center;
+	vertical-align: middle;
+	color: #666666;
+	font-size: 16px;
+}
+
+.tableList td {
+	height: 30px;
+	padding: 10px 20px;
+	border: 1px solid #d4d4d4;
+	color: #666;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+.tableList td.title {
+	text-align: left;
+}
+
+.tableList td a {
+	color: #666
+}
+
+.tableList td a:hover {
+	color: #39F;
+}
+
+.tableView th, .tableView td {
+	text-align: left
+}
+
+.tableView th {
+	font-size: 16px;
+	height: 30px;
+	padding: 10px 25px;
+}
+
+.tableView td {
+	font-size: 14px;
+	color: #999
+}
+
+.tableView td strong {
+	color: #666;
+	font-size: 14px;
+}
+
+.tableView td .hit {
+	float: right
+}
+
+.tableView .conWrap {
+	min-height: 200px;
+	vertical-align: top;
+	color: #666
+}
+
+.tableView td input[type=text] {
+	width: 100%;
+	height: 28px;
+	border: #d0d0d0 1px solid;
+}
+
+.tableView td textarea {
+	width: 100%;
+	border: #d0d0d0 1px solid;
+}
+
+.btn_table {
+	float: right;
+	padding-top: 15px;
+}
+
+.btn_list, .btn_input {
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 28px;
+	padding: 0 15px;
+	outline: none;
+	cursor: pointer;
+	background: #888888;
+	border: none;
+}
+
+/* QNA 비밀번호입력 */
+.md_secret_check {
+	display: inherit;
+	margin: 20px auto 200px;
+	width: 300px;
+	padding: 20px;
+	text-align: center;
+	border: 1px solid #dedede;
+}
+
+.md_secret_check h3 {
+	font-size: 14px;
+	font-weight: 600;
+	color: #444444;
+	text-align: left;
+}
+
+.md_secret_check p {
+	display: block;
+	height: 32px;
+	margin: 5px 0;
+	color: #666666;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.md_secret_check a {
+	display: inline-block;
+	width: 80px;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 30px;
+	text-align: center;
+	background: #2fa0ee;
+}
+
+.secret_box {
+	width: 100%;
+	border-top: 1px solid #e6e6e6;
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.secret_box th, .secret_box td {
+	height: 42px;
+	vertical-align: middle;
+	border-bottom: 1px solid #e6e6e6;
+	color: #666;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.secret_box th {
+	width: 70px;
+	text-align: left;
+	padding-left: 10px;
+	font-weight: 400;
+	background: #efefef;
+}
+
+.secret_box td {
+	padding: 0 10px;
+	background: #efefef;
+}
+
+.secret_box input, .secret_box select {
+	height: 28px;
+	padding-left: 5px;
+	border: 1px solid #c6c6c6;
+	color: #666;
+	box-sizing: border-box
+}
+
+.list_page {
+	margin: 30px auto 0;
+	text-align: center;
+	zoom: 1;
+}
+
+.list_page .first_btn {
+	display: inline-block;
+	width: 25px;
+	height: 24px;
+	text-indent: -9999px;
+	vertical-align: bottom;
+	background: url(../image/common/arrow_l.png) no-repeat left top;
+}
+
+.list_page .first2_btn {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	text-indent: -9999px;
+	vertical-align: bottom;
+	background: url(../image/common/arrow_l.png) no-repeat -25px top;
+}
+
+.list_page ul {
+	display: inline-block;
+	overflow: hidden;
+	padding: 0 7px;
+	vertical-align: bottom;
+}
+
+.list_page li {
+	float: left;
+	margin: 0 5px;
+}
+
+.list_page li:hover a, .list_page li a.on {
+	color: #fff;
+	background: #444;
+}
+
+.list_page li a {
+	display: block;
+	width: 24px;
+	height: 24px;
+	font-size: 12px;
+	color: #444;
+	text-align: center;
+	line-height: 25px;
+}
+
+.list_page .last2_btn {
+	display: inline-block;
+	width: 25px;
+	height: 24px;
+	text-indent: -9999px;
+	vertical-align: bottom;
+	background: url(../image/common/arrow_r.png) no-repeat left top;
+}
+
+.list_page .last_btn {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	text-indent: -9999px;
+	vertical-align: bottom;
+	background: url(../image/common/arrow_r.png) no-repeat -25px top;
+}

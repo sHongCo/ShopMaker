@@ -1,0 +1,487 @@
+@charset "utf-8";
+/* 占쎌���� CSS */
+
+/* �⑤���� */
+.content { display:block; width:1000px; margin:0 auto; }
+h1 { color:#444; font-size:26px; font-weight:600; padding-bottom:20px; }
+h2 { color:#444; font-size:18px; font-weight:600; margin-top:60px; border-bottom:2px solid #666; line-height:40px; }
+h3 { color:#666; font-size:16px; font-weight:600; }
+h4 { color:#666; font-size:14px; font-weight:600; }
+
+/* 占썬�쇰��揶�占� �⑤���� - �귐��わ옙占� */
+.detail_search { width:100%; border:10px solid #e9e9e9; font-size:14px; padding:10px; }
+.detail_search tbody { padding:20px; }
+.detail_search th { text-align:left; color:#666; font-weight:600; padding-left: 10px; height:40px; }
+.detail_search td { color:#666; font-weight:600; padding-left: 10px; height:40px; }
+.detail_search td:first-child { border-bottom:1px solid #e9e9e9; }
+.detail_search tr:nth-child(2) th, .detail_search tr:nth-child(2) td { padding-top:15px; }
+.detail_search select { border:1px solid #e6e6e6; outline: none; width:200px; height: 32px; padding-left: 5px; color:#666; font-weight:600; }
+.detail_search input { border:1px solid #e6e6e6; outline: none; width:178px; height: 30px; padding-left: 5px; color:#666; font-weight:600; }
+.detail_search input.search_txtBox { width:397px;}
+.detail_search a { background:#2fa0ee; color:#fff; font-size:14px; font-weight:600; display:inline-table; line-height:33px; margin-left:4px; padding:0 15px;}
+
+.box_search { position:relative; width:100%; height:auto; clear:both; padding:0 0 10px 0; display: inline-block; }
+.box_search dt, .box_search dd { float:left; height:100%; }
+.box_search dt { width:9%; font-size:14px; color:#333; padding-top:4px; }
+.box_search dd { width:91%; }
+.box_search dd a {color:#fff; font-size:12px; font-weight:600; display:inline-table; line-height:24px; margin-left:4px; padding:4px 10px; border-radius:5px; box-shadow:inset 0 3px 5px rgba(0,0,0,.125);  background:#2fa0ee; margin-bottom:4px;}
+.box_search dd .on, .box_search dd a:hover {background:#104acf;}
+
+.box_search dl .plr10 a{padding:0 10px;}
+
+.shareList_sort { width:100%; height:50px; border-bottom:1px solid #c6c6c6; }
+.shareList_sort a { font-size:12px; color:#666666; font-weight:600; line-height:50px; padding:0 15px; background: url(../image/common/sort_bar.gif) no-repeat right center; }
+.shareList_sort a:last-child { background:none; }
+.shareList_sort a:hover, .shareList_sort a.over { color:#6393b4; }
+
+.shareList_list { width:100%; margin-top:30px; }
+.shareList_list li { width:978px; height:174px; border:1px solid #c6c6c6; margin-bottom:20px; padding:10px; }
+.shareList_list div {float:left;}
+.shareList_list img { padding-right:30px; float:left;}
+.shareList_con { position:relative; width:420px; height:170px; margin-right:30px; }
+.shareList_con p.cate { margin:10px 0 20px 0;}
+.shareList_con div.date{ position: absolute; top:10px; right:150px; }
+.shareList_con div.hit{ position: absolute; top:10px; right:0; }
+/* .shareList_list p.con { margin-top:20px; }  */
+
+.shareList_list p.con{margin-top: 20px; height: 60px; overflow: hidden; white-space: normal; text-overflow: ellipsis;   -webkit-line-clamp: 4;  -webkit-box-orient: vertical;  display: -webkit-box;}
+.shareList_list div.name { position:absolute; bottom:0; font-size:12px; font-weight:600; color:#666; }
+.shareList_list div.star { position:absolute; bottom:0; right:0; }
+.shareList_date { height:130px; font-size:12px; color:#666; display:inline-block; line-height:18px; border-left:1px solid #e0e0e0; padding:25px 0 0 30px;}
+
+.main_list_id { font-size:14px;}
+
+/* 占썬�쇰��揶�占� �⑤���� - 癰��용┛ */
+.view_subTit { position:relative; color:#888; font-size:13px; font-weight:normal; padding:20px 0; border-bottom:2px solid #666666; }
+.view_subTit div.hit{ position: absolute; bottom:10px; right:0; font-size: 12px; font-weight: 600; color: #666;}
+.view_imgTable { width:100%; /*height:375px;*/ margin-top:30px; display:inline-block; }
+.view_imgTable dd.image { float:left;  }
+.view_imgTable dd.image p { width:450px; height:296px; padding:20px; border:1px solid #c6c6c6;}
+.shareMumber { font-size: 14px; color: #666; float:left; padding-top:10px; }
+.shareSns {float:right; margin-top:5px;}
+.view_imgTable dd.image p img {
+    height: 100%;
+    width: 100%;
+}
+.shareSns img { width:30px; border-radius: 30px; }
+.view_imgTable dd.table { float:right; width:467px; }
+.shareTable { width:467px; height:247px; border:1px solid #c6c6c6; }
+.shareTable { border-bottom:none; }
+.shareTable th { background: #f6f6f6; height:40px; font-size:14px; line-height:40px; color:#666; font-weight:500; border-bottom:1px solid #c6c6c6; border-right:1px solid #c6c6c6; }
+.shareTable td { background: #ffffff; height:40px; font-size:14px; line-height:40px; color:#666; padding-left:20px; border-bottom:1px solid #c6c6c6; }
+
+.btn_bottom { margin-top: 20px; text-align: center; }
+.btn_bottom span { display: inline-block; width: 130px; padding: 0; border-radius: 3px; color: #fff; font-size: 16px; font-weight:600; line-height: 40px; background: #2fa0ee; }
+
+.share_info { width:100%; height:124px; border:1px solid #c6c6c6; margin-top:20px; }
+.share_info { border-bottom:none; border-right:none; }
+.share_info th { background: #f6f6f6; font-size:14px; color:#666; font-weight:normal; border-bottom:1px solid #c6c6c6; border-right:1px solid #c6c6c6; padding:10px 0;}
+.share_info td { background: #ffffff; font-size:14px; color:#666; /*padding-left:20px;*/ border-bottom:1px solid #c6c6c6; border-right:1px solid #c6c6c6; padding:10px 10px; }
+.share_info .image { width:110px; height:110px; background:#dbdbdb; }
+.share_info td a.profile { background: #3d78ff; font-size:12px; font-weight:600; color:#fff; padding:5px 10px; margin-left:10px; border-radius: 3px; }
+
+.share_tab { width:99.8%; display:inline-block; border-top:1px solid #666666; border-left:1px solid #c6c6c6; border-right:1px solid #c6c6c6; margin-top:30px; }
+.share_tab li { width:33.2%; float:left; border-right:1px solid #c6c6c6; border-bottom:1px solid #c6c6c6; text-align:center; line-height:40px; font-size:16px; font-weight:600; color:#666; background:#f7f7f7; }
+.share_tab li:last-child { width:33.4%; border-right:none; }
+.share_tab li.on { background:#fff; border-bottom:none; }
+.bin { width:100%; height:300px; margin-bottom:30px; text-align:center; display:inline-block; line-height:300px; border-bottom:1px solid #c6c6c6; }
+
+.share_review { width:100%; display:inline-block;}
+.share_review li { position:relative; width:96%; clear:both; padding:37px 20px 0px 20px; border-bottom:1px solid #c6c6c6; padding-bottom: 20px; display: inline-block; }
+.share_review li .image, .share_review li .con { float:left; }
+.share_review li .image { padding-right:20px; }
+.share_review .con {  }
+.share_review li .image img { width:140px; }
+.share_review .con h4 { padding-bottom:12px; }
+.share_review .con p  { padding-bottom:20px; }
+.share_review .con .star { position:absolute; bottom:20px; right:20px; }
+
+.share_before { padding-top:36px;}
+.sb_contents { width:93.8%; padding:25px 30px; border:1px solid #c6c6c6; margin-top:10px; line-height:24px; }
+
+.btn_list { margin-top: 30px; text-align: center; }
+.btn_list { display: inline-block; width: 130px; padding: 0; border-radius: 3px; color: #fff; font-size: 16px; font-weight:600; line-height: 40px; background: #444444; }
+
+/* �⑤����占쎈뗄猿� - 癰��용┛ */
+.request_view { width:100%; border:1px solid #c6c6c6; margin:20px 0 50px 0; border-bottom:none; border-right:none; }
+.request_view th, .request_view td { font-size:14px; color:#666; font-weight:normal; border-bottom:1px solid #c6c6c6; border-right:1px solid #c6c6c6; }
+.request_view th { background: #f6f6f6;  padding:10px 0; }
+.request_view td { background: #ffffff; padding-left:20px; }
+.request_view th.view_tit { text-align:left; padding: 16px 26px 16px 26px; font-weight:600; position:relative; }
+.request_view td.con { padding:30px; line-height:26px;}
+.request_view .view_tit .cate { padding-left:50px; }
+.request_view .view_tit .hit { position:absolute; right:26px; }
+
+.commentWrap			{ padding:15px 15px 2px 15px; background:#f6f6f6}
+.comment_w				{ margin-bottom:10px;}
+.comment_w textarea		{ display:inline-block; width:875px; min-height:60px; padding:10px; border:1px solid #e6e6e6; color:#666; box-sizing:border-box}
+.comment_w a			{ display:inline-block; width:90px; height:60px; line-height:60px; vertical-align:top; text-align:center; background:#0eade7; font-size:14px; font-weight:600; color:#fff; }
+.comment_l p			{ margin-bottom:10px;}
+.comment_l ul			{ padding:15px 0; border-top:1px solid #e6e6e6}
+.comment_l ul li		{ color:#666; font-size:13px; padding:0 15px; }
+.comment_l .comment_text	{ margin-top:8px; line-height:20px;}
+
+/* �⑤���� 占쎄낯苑�占쎌����筌�占� - modal window styles */
+#lean_overlay			{ position:fixed; top:0px; left:0px; display: none; width:100%; height:100%; background:#000; z-index:100;}
+.popupModal2			{ position:relative; overflow:hidden; width:1000px; height:550px; border:2px solid #2fa0ee; box-sizing:border-box; background: #fff;}
+.popupModal2 *			{ box-sizing:border-box; }
+.popupModal2 h2			{ position:relative; width:100%; height:40px; line-height:40px; padding-left:20px; color:#fff; font-size:16px; font-weight:600; background:#2fa0ee; margin-top:0 !important; border:none !important;}
+.popupCon2	  { position:relative; width:100%; height:100%; overflow:scroll; }
+.popupCon2 dd { position:relative; width:100%; padding:10px; margin-bottom:30px; }
+.popup_close { position:absolute; top:0; right:0; padding:11px; cursor:pointer}
+.popprofile td { padding-top:10px; padding-bottom:10px; line-height:20px; }
+
+
+
+/* ��袁⑹グ占쎈���� - �귐��わ옙占� */
+.shareList_price  { padding:13px 0; background:#ff4b5c; font-size:18px; font-weight:600; color:#fff; width:175px; text-align:center;}
+.shareList_table { clear:both; width:180px; padding-top:10px; }
+.shareList_table th { font-weight:normal;  font-size:12px; color:#666;}
+.shareList_table td { text-align:right;  font-size:12px; color:#666;}
+.p_price {padding:40px 0 0 20px !important;}
+
+/* ��袁⑹グ占쎈���� - 癰��용┛ */
+.shareTable select { border: 1px solid #e6e6e6; outline: none; width: 210px; height: 29px; padding-left: 5px; color: #666; font-weight: 600; }
+.share_detail { width:94%; padding:30px 30px 80px 30px; line-height:24px; }
+.share_detail img{max-width: 100%;}
+.font_userId b { padding:0 10px; background: url(../image/common/sort_bar.gif) no-repeat center; }
+
+
+/* 占쎈����揶�占쏙옙占� - 占쎌��占쏙옙���� */
+.tab_step			{ zoom:1}
+.tab_step:after		{ content:""; clear:both; display:block;}
+.tab_step li		{ position:relative;  float:left; width:25%; box-sizing:border-box; color:#666; }
+.tab_step li .tab	{ padding:23px 0 17px 15px; border:1px solid #c6c6c6; border-top:1px solid #666666; border-left:0;}
+.tab_step li:first-child .tab { border-left:1px solid #c7c7c7;}
+.tab_step li h3		{ font-size:24px;}
+.tab_step li p		{ position:absolute; left:90px; top:31px; font-size:16px; font-weight:600; }
+.tab_step li img	{ position:absolute; right:10px; bottom:16px;}
+.tab_step li.on		{ color:#fff;}
+.tab_step li.on .tab{ background:#0eade7; border-bottom:1px solid #0eade7;}
+.tab_step li.on h3	{ color:#fff}
+
+div.textarea { margin-bottom:30px; padding:15px; border:1px solid #e6e6e6; }
+div.textarea textarea		{ width:100%; height:145px; overflow-y:auto; border:0; color:#666; font-size:14px; font-weight:600; line-height:140%; }
+.agreeCk					{ margin:-20px 0 30px 0; color:#666; font-size:12px; font-weight:600;}
+.agreeCk input				{ vertical-align:top}
+
+.btn_joinL { margin-top: 20px; text-align: center; }
+.btn_joinL span { display: inline-block; width: 190px; padding: 0; border-radius: 3px; color: #fff; font-size: 18px; font-weight:600; line-height: 50px; background: #2fa0ee; }
+
+.btn_joinL2 { display: inline-block; width: 190px; padding: 0; border-radius: 3px; color: #fff; font-size: 18px; font-weight:600; line-height: 50px; background: #2fa0ee; } */
+
+/* 占쎈����揶�占쏙옙占� - 占쎈����占쎈베�ワ옙���� */
+.person_change { width:100%; border:1px solid #dedede; border-bottom:none; margin-bottom:30px; font-size:13px; border-right: 1px solid #e6e6e6;}
+.person_change th{ text-align:left; background:#efefef;	color:#666;	font-weight:normal; padding-left:25px; border-bottom:1px solid #e6e6e6; height:40px; }
+.person_change td{ position:relative; padding:6px 0 6px 9px; color:#666; border-bottom:1px solid #e6e6e6; border-right:1px solid #e6e6e6; }
+.person_change p {	margin-left:10px;}
+.person_change input {	border:1px solid #c6c6c6;	outline:none;	height:26px; 	padding-left:5px;}
+.gongU {border: none !important;  width: 230px;}
+.person_change input.max { width:98%; }
+.person_change textarea.max { width:98%; height:180px; border: 1px solid #c6c6c6; }
+.person_change select {	border:1px solid #c6c6c6;	outline:none;	height:28px; 	padding-left:5px;}
+.person_change textarea {	border:1px solid #e6e6e6;	outline:none;	height:100px; 	width:96%;	padding-left:5px;}
+.person_change input[type=password] {	width:235px;}
+.person_change input[type=email], .person_change input[type=url] {	width:290px;}
+.person_change input[type=tel]{	width:80px;}
+.phone_vide {	color:#888;}
+.ph{	width:78px;}
+.address{	margin-right:4px;	width:177px;	float:left;}
+.address_btn{	display:block;	float:left;	margin-top:5px;	cursor:pointer;}
+.address_detail01 {	width:350px;}
+.address_detail02 {	margin-left:5px;	width:350px;}
+.job{	width:293px;}
+.last_grade{	width:240px;}
+.career {	width:61px;	margin-bottom:7px;}
+.new{	position:relative;	top:9px;	margin-left:10px;	margin-right:5px;}
+.btn_joinS { display: inline-block; padding:0 10px; border-radius: 2px; color: #fff; font-size: 12px; line-height: 28px; background: #2fa0ee; background:#979797;}
+
+.resumeTable				{ width:100%; margin-bottom:30px; border-top:1px solid #e6e6e6; border-left:1px solid #e6e6e6; font-size:13px; text-align:left; }
+.resumeTable th, .resumeTable td { height:28px; color:#666; border-bottom:1px solid #e6e6e6; }
+.resumeTable th				{ padding:6px 0 6px 18px; border-right:0; font-weight:normal; text-align:left; background:#efefef;}
+.resumeTable td				{ padding:6px 9px; border-right:1px solid #e6e6e6;}
+.send_check			{ position:relative}
+.send_check span	{ margin:5px 20px 0 20px;}
+.sns_send			{ position:absolute; top:14px;}
+
+/* 占쎈����揶�占쏙옙占� - 揶�占쏙옙���욜�뤄옙 */
+.join_ok {display: inherit; margin:0 auto; width:540px; text-align:center; padding-top:20px;}
+.join_ok p { font-size:30px; font-weight:600; color:#333333; padding:25px 0 40px; }
+
+
+/* 占쎈Ŧ��占쎈����占쎌�猿� - 揶����� */
+.seller { position: relative; top: 3px; margin-left: 10px; margin-right: 5px; height:auto !important; }
+.seller:first-child {margin-left:0px;}
+
+
+/* 占쎈Ŧ��占쎈����占쎌�猿� - 揶����ㅿ옙�毓쏙옙占� */
+.file_input {float:left; width:130px; height:28px; margin-left:4px; }
+.file_input input.file_miss {height:0; overflow:hidden; border:0; }
+.fi_except { position:absolute; top:13px; left:380px;}
+
+/* 嚥≪����占쏙옙 */
+.login_wrap {display: inherit; margin:0 auto; width:340px; text-align:center; padding-top:100px;}
+.login_wrap img { padding-bottom:20px;}
+
+.login_input { width:330px; border:1px solid #c6c6c6; background:#efefef; font-size:14px; color:#999; line-height:50px; padding-left:10px; margin-bottom:10px; height:50px;}
+.btn_loginXL { margin-top: 20px; text-align: center; }
+.btn_loginXL span { display: inline-block; width: 340px; padding: 0; color: #fff; font-size: 18px; font-weight:600; line-height: 50px; background: #2fa0ee; }
+
+.idSave	{ color:#666; font-size:12px; float:left; padding-top:4px;}
+.idSave input { vertical-align:top}
+.findJoin { float:right; margin-bottom:20px;}
+
+/* 占쎄쑴��占쏙옙/��袁⑨옙甕곕���� 筌≪��由� */
+.idPwSearch_wrap { display:inherit; margin:0 auto; width:990px; padding:80px 0 20px 0; text-align:center; }
+.idPwSearch_wrap dd {float:left; width:450px; border:1px solid #dedede; padding:20px 20px 30px 20px; }
+.idPwSearch_wrap dd:first-child { border-right:none;}
+.idPwSearch_wrap h3 { font-size:14px; font-weight:600; color:#444444; text-align:left; }
+.idPwSearch_wrap p	{ display:block; height:32px; margin:30px 0 10px 0; color:#666666; font-size:13px; font-weight:400; text-align:left;}
+.btn_idPwSearch { display: inline-block; width:140px; border-radius: 2px; color: #fff; font-size: 18px; font-weight:600; line-height: 40px; text-align:center; background: #2fa0ee;}
+.btn_login {display: inline-block; width:100%; border-radius: 2px; color: #fff; font-size: 18px; font-weight:600; line-height: 50px; text-align:center; background: #2fa0ee; } /* **************새로 추가함************** */
+.table_box2			{ width:100%; border-top:1px solid #e6e6e6; border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; text-align:left; margin-bottom:30px;}
+.table_box2 th, .table_box2 td		{ height:42px; vertical-align:middle;  border-bottom:1px solid #e6e6e6; color:#666; font-size:13px; font-weight:600; }
+.table_box2 th		{ width:70px; text-align:left; padding-left:10px; font-weight:400; background:#efefef; }
+.table_box2 td		{ padding:0 10px; background:#efefef; }
+.table_box2 input, .table_box2 select	{ height:28px; padding-left:5px; border:1px solid #c6c6c6; color:#666; box-sizing:border-box}
+
+
+/* 占쎌�긱�� 筌�遺얜�� */
+.left_SSicon { display:inline-block; width:100%; padding-bottom:10px; }
+.left_SSicon a li { width: 100%; height:55px; text-align:center; float:left; background:#2fa0ee; border-radius:3px;  padding-top:15px; font-size:14px; font-weight:600; color:#fff;}
+.left_SSicon a:last-child li {background:#ff4b5c;}
+
+.left_menu { display:inline-block; width:198px; border-left:1px solid #c6c6c6; border-right:1px solid #c6c6c6; border-bottom:1px solid #c6c6c6;}
+.left_menu dl { border-top:1px solid #c6c6c6; }
+.left_menu dl a dt { background:#efefef; border-top:1px solid #fff; font-size:14px; font-weight:600; color:#666666; line-height:40px; padding-left:20px;}
+.left_menu dl a:nth-child(2) dd  { padding-top:10px; }
+.left_menu dl a:last-child dd { padding-bottom:10px; }
+.left_menu dl a dd { font-size:12px; font-weight:600; color:#888888; line-height:26px; padding-left:20px; }
+.left_menu dl a:hover dd, .left_menu dl a.on dd { color:#0eade7; }
+
+/* 筌�����占쎌����筌�占� - 筌�遺우�� tab */
+.mymain_tab { width:100%; height:68px; border-top:1px solid #dedede;  border-bottom:1px solid #dedede; margin-bottom:20px; }
+.mymain_tab li { float:left; width:24.742%; text-align:center; height:56px; font-size:16px; font-weight:600; color:#666666; background:#efefef; line-height:24px; padding-top:12px;
+				 border-right:1px solid #ffffff; border-left:1px solid #dedede; }
+.mymain_tab li:first-child { border-left:1px solid #dedede; }
+.mymain_tab li:last-child { border-right:1px solid #dedede; }
+.mymain_tab li a { font-size:16px; font-weight:600; color:#666666; }
+.mymain_tab li a b { color:#2fa0ee; font-weight:600; }
+.mymain_tab li a em { color:#ff4b5c; font-weight:600; font-style:normal; }
+
+/* 筌�����占쎌����筌�占� - 筌�遺우�� */
+.mymain_info { width:100%; }
+.mymain_info>dd { display:inline-block; width:378px; border:1px solid #dedede; }
+.mymain_info .title { text-align:center; height:150px; padding-top:42px; border-bottom:1px solid #e6e6e6; }
+.mymain_info .title p { font-size:24px; font-weight:600; color:#666666; padding-top:16px; }
+.mymain_info .list { padding:15px 30px 15px 30px; background:#efefef;}
+.mymain_info .list li { width:100%; font-size:14px; font-weight:600; color:#666666; line-height:38px; display:inline-block }
+.mymain_info .list li a { font-size:14px; font-weight:normal; color:#888888; }
+.mymain_info .list li a span { float:right; }
+.mymain_info .list li a b { font-size:18px; font-weight:600; color:#2fa0ee; }
+.mymain_info .red li a b { color:#e14948; }
+
+/* 筌�����占쎌����筌�占� - �닌���占쎈��肉� tab */
+.myPurchase_tab { width:100%; height:68px; border-top:1px solid #dedede;  border-bottom:1px solid #dedede; }
+.myPurchase_tab li { float:left; width:19.94%; text-align:center; height:56px; font-size:16px; font-weight:600; color:#666666; line-height:24px; padding-top:12px;
+					 background: url(../image/common/bg_arrow_r.png) no-repeat #efefef right center; }
+.myPurchase_tab li:first-child { border-left:1px solid #dedede; }
+.myPurchase_tab li:last-child { background:#ffffff; border-right:1px solid #dedede; }
+.myPurchase_tab li:nth-child(4) { background:#efefef; }
+.myPurchase_tab li a { font-size:16px; font-weight:600; color:#2fa0ee; }
+.myPurchase_tab li a b { color:#2fa0ee; font-weight:600; }
+.myPurchase_tab li a em { color:#ff4b5c; font-weight:600; font-style:normal; }
+.myPurchase_tab li p {color: #666666;}
+
+/* 筌�����占쎌����筌�占� - �닌���占쎈��肉� 筌�遺우�� */
+.purchaseTable { width:100%; margin-top:20px; border-top:1px solid #dedede; border-left:1px solid #dedede; font-size:13px; text-align:left; }
+.purchaseTable th, .purchaseTable td { font-size:14px; color:#666; border-bottom:1px solid #dedede; line-height:50px; padding:0 20px 0 30px; }
+.purchaseTable th { border-right:0;  font-weight:600; text-align:left; background:#efefef;}
+.purchaseTable td { font-weight:normal; border-right:1px solid #dedede;}
+.purchaseTable th span { background:#989898; padding:0px 9px; float:right; border-radius:20px; line-height: 26px; margin-top:12px; color:#ffffff; }
+
+/* 筌�����占쎌����筌�占� - 野�占쏙옙占� */
+.mypage_search {width:99.8%; line-height:50px; background:#efefef; border:1px solid #dedede; text-align:center; }
+.mypage_search select, .mypage_search input { border:1px solid #c6c6c6; outline:none; }
+.mypage_search select { width:180px; height:28px; }
+.mypage_search input { width:370px; height:26px; padding-left:5px; }
+.mypage_search a { padding:6px 15px; background:#444444; font-size:14px; font-weight:600; color:#ffffff; }
+
+/* 筌�����占쎌����筌�占� - �닌���占쎈��肉� - 占쎈�毓쏙옙占썸묾怨�夷� */
+.mypage_table { width:100%; border:1px solid #dedede; border-bottom:none; margin-bottom:50px; font-size:14px; margin-top:10px; }
+.mypage_table th{ text-align:left; padding-left:25px; }
+.mypage_table td{ color:#666; border-bottom:1px solid #e6e6e6; }
+.mypage_table tr:first-child th { border-right:1px solid #dedede; }
+.mypage_table tr:last-child { background:#d8e2e8; height:40px; }
+.mypage_table tr:last-child th, .mypage_table tr:last-child td{ font-size:14px; font-weight:600; color:#666666; }
+.mypage_table tr:nth-child(1) td { padding:30px; }
+.mypage_table tr:nth-child(2) td:nth-child(1) { padding:30px;  border-right:1px solid #e6e6e6; }
+.mypage_table tr:nth-child(2) td:nth-child(2), .mypage_table tr:nth-child(4) td:last-child { text-align:center; padding:0px; border-bottom:none; }
+.mypage_table tr:nth-child(3) td { line-height:40px; font-size:14px; font-weight:600;  border-right:1px solid #e6e6e6; border-bottom:none; padding:0 30px; }
+.mypage_table tr:nth-child(4) td {padding:10px 0 10px 30px; }
+.mypage_table tr:nth-child(4) td { border-right:none; position:relative; }
+.mypage_table td a.btn { font-size:12px; font-weight:normal; color:#ffffff; background:#979797; padding:8px; border-radius:2px; display:inline-block; }
+.mypage_table li { line-height:24px; background: url(../image/common/list_dot.png) no-repeat left center; padding-left:15px; }
+.mypage_table .price { font-size:18px; font-weight:600; color:#e14948; }
+.mypage_table img { float:left; padding-right:20px; width:120px; }
+.mypage_table em { float:right; font-style:normal; }
+.mypage_table .num { font-size:16px; font-weight:600; color:#444444;}
+.mypage_table .date { font-size:12px; font-weight:normal; color:#666666; padding-top:20px;}
+.mypage_table .info { position:relative; float:left; width:380px; height:;}
+.mypage_table .info p.cate { margin-bottom:15px;}
+.mypage_table .info div.hit{ position: absolute; top:0; right:0; }
+.mypage_table .info div.option { padding-top:8px;}
+.mypage_table .inquiry { position:absolute; top:5px; right:0; background:#444444; float:right; }
+
+/* 筌�����占쎌����筌�占� - 占쎈�毓썲������占쏙옙 - 筌�遺우�� */
+.board_list { width:100%; margin-top:10px; }
+.board_list li { height:79px;  border:1px solid #c6c6c6; margin-bottom:10px; padding:15px; position:relative; }
+.board_list div {float:left;}
+.board_list img { padding-right:10px; float:left; width:120px; height:100%; }
+
+.board_list .info { position:relative; float:left; width:440px; height:100%; }
+.board_list .info .cate { margin-bottom:15px;}
+.board_list .info .date{ position: absolute; top:0; right:100px; }
+.board_list .info .hit{ position: absolute; top:0; right:0; }
+.board_list .info .option { position: absolute; bottom:0;}
+.board_list .inquiry { position:absolute; top:11px; right:0; background:#444444; float:right; }
+.board_list .star { position:absolute; bottom:0; right:0; }
+.board_list .price { position:relative; width:120px; height:100%; font-size:12px; color:#666; display:inline-block; line-height:18px; border-left:1px solid #e0e0e0; margin-left:20px; padding-left:20px;}
+.board_list .price .price_box { position:relative; width:100%; background:#ff4b5c; font-size:16px; font-weight:600; color:#fff; text-align:center; line-height:25px; }
+.pb_table { clear:both; width:100%;  font-size:12px; color:#666; }
+.pb_table th { font-weight:normal; }
+.pb_table td { text-align:right; }
+.board_list .edit { width:100%; text-align:center; margin-top:8px;  }
+.board_list .edit a { font-size:14px; font-weight:600; color:#ffffff; border-radius:2px; padding:5px 10px; }
+
+/* 筌�����占쎌����筌�占� - �닌����울옙�깍옙 - 占쎈�毓썲������占쏙옙 �귐��わ옙占� */
+.serviceTable				{ width:100%; border-left:1px solid #dedede; border-top:1px solid #dedede; border-right:1px solid #dedede; text-align:center}
+.serviceTable th, .serviceTable td { padding:10px 0; border-bottom:1px solid #dedede; color:#666; font-size:13px; line-height:20px;}
+.serviceTable th			{ font-weight:500; background:#efefef}
+.serviceTable td.title		{ text-align:left; }
+.serviceTable td.title a	{ display:inline-block; color:#666; font-weight:600}
+.serviceTable td.rec {background: url('../image/common/ico_reple.png') no-repeat left center; padding-left:40px; }
+
+.board_search { width:100%; height:28px; position:relative; display:inline-block;}
+.board_search span { position:absolute; left:0; bottom:5px; font-size:14px; font-weight:600; color:#666666;}
+.board_search p { position:absolute; right:0; top:0; padding-bottom:5px;}
+.board_search p select, .board_search input { border:1px solid #c6c6c6; outline:none; }
+.board_search p select { width:75px; height:28px; }
+.board_search p input { width:150px; height:26px; padding-left:5px; }
+.board_search p a { padding:6px 15px; background:#444444; font-size:14px; font-weight:600; color:#ffffff; }
+
+/* 筌�����占쎌����筌�占� - �닌����울옙�깍옙 - 占쎈�毓썲������占쏙옙 癰��용┛ */
+.board_view td { text-align:left; padding-left:30px; padding-right:30px;}
+.board_view span { float:right; }
+.board_view span b { font-weight:normal; padding-left:100px; }
+
+/* 筌�����占쎌����筌�占� - �닌����울옙�깍옙 - 占쎈�毓썲������占쏙옙 占쎄�由� */
+.board_write th { font-weight:600; }
+.board_write td textarea { width: 95%; height: 145px; overflow-y: auto; border: 0; color: #666; font-size: 13px; font-weight:normal; line-height: 140%; padding:10px; border: 1px solid #c6c6c6 !important; }
+
+/* 筌�����占쎌����筌�占� - �닌����울옙�깍옙 - 1:1�⑤�����닌����얜��� - �귐��わ옙占� */
+.inquiry_list a { font-weight:normal !important;}
+.inquiry_ok { color:#2fa0ee !important; font-size:13px !important; }
+.inquiry_check { color:#ff4b5c !important; font-size:13px !important; }
+
+/* 筌�����占쎌����筌�占� - 占쎄쑬以�占쎄쑨占썹�깍옙 */
+.board_write img { float:left; padding-right:20px; }
+.profile_file li { display:inline-block; }
+.profile_file li:first-child { padding-bottom:20px;}
+
+/* 筌�����占쎌����筌�占� - �⑤�����울옙�깍옙 - �⑤�����귐��わ옙占� */
+.sharelist_tab { display:inline-block; width:100%; border: 1px solid #dedede; margin-top:50px; }
+.sharelist_tab li { float:left; width:49.8%; background:#efefef; line-height:50px; font-size:16px; font-weight:600; color:#666666; text-align:center;  }
+.sharelist_tab li:first-child { border-right: 1px solid #dedede; }
+.sharelist_tab li.on, .sharelist_tab li:hover { background:#444444; color:#ffffff; }
+
+/* 筌�����占쎌����筌�占� - �⑤����占쎄�以� */
+.register_txtbox {width:95.8%; background:#efefef; border:1px solid #dedede; padding:15px 20px; margin-bottom:40px; }
+.register_txtbox li { line-height:30px; background: url(../image/common/list_dot.png) no-repeat left center; padding-left:15px; font-size:14px; color:#666666; text-align:left; }
+
+.register_cate { width:100%; display:inline-block; margin-bottom:40px; }
+.register_cate li { float:left; width:23.5%; margin-right:20px; }
+.register_cate li:last-child { float:left; margin-right:0px; }
+.register_cate select { width:100%;	border:1px solid #c6c6c6;	outline:none;	height:26px; 	padding-left:5px; color:#666;}
+
+.register_file img { width:80px; height:53px; float:left;}
+.register_file .file_choice { margin:12px 0 0 20px; }
+.rf_coment { position:absolute; top:15px; left:180px; line-height:18px;}
+.rf_delete { position:absolute; top:24px;  right:30px; }
+
+.register_option { display:table; margin:0 auto; clear:both; margin-bottom:40px; }
+.register_option ul { width:240px; border:1px solid #c6c6c6; margin:0 auto; background:#efefef; padding:5px 20px; font-size:13px; color:#666666; float:left; margin-right:10px;}
+.register_option ul:last-child {margin-right:0;}
+.register_option ul li { position:relative; line-height:40px; }
+.register_option ul li:nth-last-child(2) { padding-bottom:20px;}
+.register_option ul li:last-child { text-align:center; line-height:60px; border-top:1px solid #c6c6c6; }
+.register_option select { border:1px solid #c6c6c6;	outline:none; width:100%;	height:28px; 	padding-left:5px;  font-size:12px; color:#666666;}
+.register_option input { border:1px solid #c6c6c6;	outline:none; width:160px;	height:26px; 	padding-left:5px; }
+.register_option div input { position:absolute; right:0; top:6px;}
+.register_option a { display: inline-block; padding:0 10px; border-radius: 2px; color: #fff; font-size: 12px; line-height: 28px; background: #2fa0ee; background:#979797;}
+
+/* �⑤����獄�遺쎈��占쏙옙 */
+.basket { width:100%; display:inline-block; font-size:14px; text-align:center; padding-top:18px; }
+.basket img { width:20px !important;  padding-right: 4px; float:none; vertical-align:text-bottom; }
+.basket p { padding-top:6px; font-size:12px;}
+
+/* �⑤�����귐��わ옙占� */
+.sharelist_tab { display:inline-block; width:100%; border: 1px solid #dedede; margin-top:50px; }
+.sharelist_tab li { float:left; width:49.8%; background:#efefef; line-height:50px; font-size:16px; font-weight:600; color:#666666; text-align:center;  }
+.sharelist_tab li:first-child { border-right: 1px solid #dedede; }
+.sharelist_tab li.on, .sharelist_tab li:hover { background:#2d9fee; color:#ffffff; }
+
+/* 野�怨��ｏ옙袁⑥┷占쎌����筌�占� */
+.payok_msg { width:100%; background:#f2f2f2; border:1px solid #dedede; height:140px; margin-bottom:30px; border-radius:5px; }
+.payok_msg img { width:80px; }
+.payok_msg td { font-size:30px; font-weight:500; color:#444444; }
+.payok_msg .red { font-size:30px !important; font-weight:600 !important; color:#d82219; }
+.payok_msg .bold { font-size:30px !important; font-weight:600 !important; }
+.payok_msg td p { font-size:14px; font-weight:600; color:#444444; padding-top:10px; }
+
+.pay_complate				{ width:100%; border-left:1px solid #dedede; border-top:1px solid #dedede; border-right:1px solid #dedede; text-align:center}
+.pay_complate th, .pay_complate td { border-bottom:1px solid #dedede; color:#666; font-size:13px; line-height:20px;}
+.pay_complate th			{ padding:10px 0; font-weight:600; background:#efefef}
+.pay_complate td			{ padding:20px 0; border-right:1px solid #dedede; }
+.pay_complate td:last-child	{ border-right:0; }
+.pay_complate .title		{ text-align:left; padding-left:20px; }
+.pay_complate .pay, .pay_complate .total { text-align:right; padding-right:20px; }
+.pay_complate .total { font-size:16px; font-weight:600; color:#0eade7;}
+
+
+/* 占쎈����占쎌��占�, 揶����ㅿ옙類ｋ�ワ㎗����獄��밸� */
+
+.service_box { border:1px solid #dbdbdb; padding:20px; font-size:14px; margin-top:20px;}
+.service_box_top { border-bottom:1px solid #666; padding-bottom:20px;}
+.service_box_top h4 { color:#252525; line-height:30px; font-size:14px; margin-left:10px;}
+.service_box h3{ color:#252525; padding-top:30px; }
+.service_box b { padding-bottom:20px; display:block; color:#444;  padding-top:20px; margin-top:30px; margin-left:10px;}
+.service_box p { padding:0 10px; line-height:20px; padding-bottom:10px; color:#666;}
+
+
+.service_name { background:#f4f4f4; padding:20px; line-height:20px; margin-bottom:20px;}
+
+.service_box_2 { border:1px solid #dbdbdb; padding:20px; font-size:14px; margin-top:20px;}
+.service_box_top { border-bottom:1px solid #666; padding-bottom:20px;}
+.service_box_top h4 { color:#252525; line-height:30px; font-size:14px;  margin-left:10px;}
+.service_box_2 h3{ color:#252525; padding:30px 0; }
+.service_box_2 b { padding:5px 10px; display:block; color:#666;}
+.service_box_2 p { padding:0 10px; line-height:24px;  color:#666;}
+.service_box_2 table { width:100%; text-align:left; margin:20px 0; }
+.service_box_2 td, .service_box_2 th { border-bottom:1px solid #dbdbdb; height:20px; padding:10px; border-right:1px solid #dbdbdb;}
+.service_box_2 td:last-child, .service_box_2 th:last-child{ border-right:0;}
+.service_box_2 th {border-top: 1px solid #dbdbdb; background:#ededed;}
+.service_box_2 td { line-height:24px;}
+
+
+.agreeCk span{ display:inline-block; float:right; padding:8px 15px; color:#fff; background:#666; cursor:pointer;}
+
+
+/* FAQ 占쎄낮�� 占쏙옙 */
+.tabs { width:500px; height:46px; margin-bottom: 20px; border:1px solid #c6c6c6; overflow:hidden; box-sizing:border-box; }
+.tabs li { width:25%; float:left; text-align:center; line-height:46px; border-right:1px solid #c6c6c6; box-sizing:border-box;}
+.tabs li:last-child { border-right:none; }
+.tabs li a { display: block; color:#666; font-size:16px; font-weight:600; }
+.tabs li a:hover, .tabs li.active, .tabs li.active a:hover { background: #2d9fee; color:#ffffff;}
+.tabs li.active a { color:#ffffff; }
+.tab_container { clear:both; float:left; width:100%; background: #fff; padding-bottom:50px; }

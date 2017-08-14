@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+
+/* 硫붿씤 FOOT */
+.main_foot { width:100%; height:235px; border-top:1px solid #c6c6c6; /*margin-top:70px;*/   clear:both;}
+.main_footBox { width:1000px; height:235px; margin:0 auto;}
+.main_foot div dd { width:33.2%; height:235px; position:relative; float:left; border-right:1px solid #c6c6c6; }
+.main_foot div dd:last-child { border-right:none; }
+.main_footPlus { position:relative; clear:both; float:right; margin:6px 6px 0 0; }
+.main_footTitle { padding:40px 0 10px 30px; font-size:16px; font-weight:600; color:#444;}
+.main_footLine { width:20px; height:1px; background:#444;  margin-left:30px;}
+.main_footTxt { padding:20px 30px 0 30px;}
+
+.main_footTxt li a { font-size:13px; color:#666; font-weight:600; line-height:26px; }
+.main_footTxt li a:hover {color:#666666; }
+.mainNotice li a span{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; display:block; float:left; width:70%;}
+.mainNotice b { float:right;}
+.mainQnA b { padding:2px 5px; background:#888; color:#fff; font-size:11px; font-family:Dodum; font-weight:normal; letter-spacing:-1px; margin-left:5px; border-radius:2px;}
+.mainQnA li a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; display:block; float:left; width:79%;}
+.mainCC li:first-child { font-size:36px; color:#444; font-weight:bold;}
+.mainCC li:last-child { font-size:13px; color:#666; font-weight:600; line-height:22px; padding-top:20px;}
