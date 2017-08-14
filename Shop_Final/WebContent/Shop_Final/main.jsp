@@ -11,7 +11,7 @@
 </head>
 <body>
 
-		 	<%@ include file="header.jsp" %>
+	<%@ include file="header.jsp"%>
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
@@ -42,15 +42,15 @@
 
 		</div>
 	</nav>
-		<!--  SNS  -->
-		<div>
-		<%@ include file = "sns.jsp" %>
-		</div>	
-		<!-- 채팅 -->
-		<div>
-		<%@ include file = "livechat.jsp" %>
-		</div>
-	
+	<!--  SNS  -->
+	<div>
+		<%@ include file="sns.jsp"%>
+	</div>
+	<!-- 채팅 -->
+	<div>
+		<%@ include file="livechat.jsp"%>
+	</div>
+
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
