@@ -1,47 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=euc-kr"
-	pageEncoding="euc-kr"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import = "data.OVO" %>
 <%@ page import = "data.DAO" %>
 <%@ page import = "java.util.List" %>
 <%@ page import = "java.text.SimpleDateFormat" %>
 <%@ page import = "java.util.ArrayList" %>
 
+<%@ include file = "header.jsp" %>
 
-<%
-		Object id;
-		String uid="BBEBBE";
-        /*if(session.getAttribute("uid") == null) // ╥н╠вюнюл ╬х╣г╬Зю╩ ╤╖
-        {  
-			<script language="javascript">
-			<!--
-			 alert("╥н╠вюн го╪╪©Д!");
-			 history.go(-1);
-			-->
-			</script>
-
-
-
-        }
-        else // ╥н╠вюн гъю╩ ╟Ф©Л
-        {
-        	id=session.getValue("uid");
-        	uid=id.toString();
-        }
-*/
-%>
 <head>
-<title>аж╧╝го╠Б</title>
-<meta charset="euc-kr">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<script src="js/mobile.js" type="text/javascript"></script>
+<title>Лё╪К╛╦М∙≤Й╦╟</title>
+<meta charset="UTF-8">
+
 </head>
 <body>
-<h1>аж╧╝╦Я╥о</h1>
+<h1>Лё╪К╛╦К╙╘К║²</h1>
 <table border=1 width="500px" cellspacing=0>
 	<tr>
-		<td>аж╧╝╧Ьхё</td><td>аж╧╝юз ╬фюл╣П</td>
-		<td>аж╧╝г╟╦Я</td>	<td>╪Ж╥╝</td><td>╟║╟щ</td><td>аж╧╝╫ц╟ё</td>
+		<td>Лё╪К╛╦К╡┬М≤╦</td><td>Лё╪К╛╦Л·░ Л∙└Л²╢К■■</td>
+		<td>Лё╪К╛╦М▓┬К╙╘</td>	<td>Л┬≤К÷┴</td><td>Й╟─Й╡╘</td><td>Лё╪К╛╦Л▀°Й╟└</td>
 	</tr>	
 <%
 	DAO dao = DAO.getDao();
@@ -52,7 +29,6 @@
 	try{
 	for(int i=0; i<order.size();i++){
 		ovo=order.get(i);
-
 %>
 	<tr>
 		<td><%=ovo.getoNum() %></td>
@@ -68,7 +44,7 @@
 	}
 	%>
 	<tr>
-		<td>ця ╦ецБ╬в</td><td><%=oPrice %></td>
+		<td>Л╢² К╖╓Л╤°Л∙║</td><td><%=oPrice %></td>
 	</tr>
 </table>
 

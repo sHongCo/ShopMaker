@@ -42,14 +42,32 @@
 	<div id="page">
 		<div id="header">
 		<div>
-				<ul id="login" class="login">
-					<li class="logout" >
-						<a href=#><%=uId %> 님 페이지 &nbsp;&nbsp;| </a>
+<%
+					if(uId.equals("master")){
+					%>
+						 관리자 페이지 &nbsp;&nbsp; |
+				    	<a href="main.jsp">MAIN</a>&nbsp;&nbsp;| &nbsp;
+						<a href="viewGoodList.jsp">GoodsList</a>&nbsp;&nbsp;| &nbsp;
+						<a href="orderList.jsp">&nbsp; 주문상황 </a>&nbsp;&nbsp;| &nbsp;
+						<a href="GoodList.jsp">&nbsp; 재고관리  </a>&nbsp;&nbsp;| &nbsp;
 						<a href="logoutAction.jsp">&nbsp; LogOut</a>
+					<%		
+					}else{
+					%>
+						<%=uId %> 님 페이지 &nbsp;&nbsp;| 
+						<a href="main.jsp">MAIN</a>&nbsp;&nbsp;| &nbsp;
+						<a href="viewGoodList.jsp">GoodsList</a>&nbsp;&nbsp;| &nbsp;
+						<a href="wishList2.jsp"> &nbsp; 장바구니 | </a>&nbsp;&nbsp;| &nbsp;
+						<a href=#>&nbsp; 주문내역 | </a>&nbsp;&nbsp;| &nbsp;
+						<a href=#>&nbsp; 회원정보 | </a>&nbsp;&nbsp;| &nbsp;
+						<a href="logoutAction.jsp">&nbsp; LogOut</a>
+					<%
+					}
+					%>
 					<hr>				
 					</li>
-				</ul>
-		</div>
-	</div>
-</div>
+					</ul>
+					</div>
+					</div>
+				</div>
 <%}//반복문 끝.%>

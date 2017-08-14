@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
@@ -8,11 +8,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>»óÇ°Ãß°¡</title>
+<title>ìƒí’ˆì¶”ê°€</title>
 </head>
 <body>
 <%@ include file="header.jsp" %>
-<h1>Á¦Ç° Á¤º¸</h1>
+<h1>ì œí’ˆ ì •ë³´</h1>
 <br />
 <table border=1 width="700px" cellspacing=0>
 
@@ -20,25 +20,25 @@
 <form method=post action="addGoodsPro.jsp">
 
 	<tr>
-		<td>Á¦Ç°¸í</td>
+		<td>ì œí’ˆëª…</td>
 		<td colspan="3">
 		<input type="text" name=pProduct value=>
 		</td>
 	</tr>
 	<tr>
-		<td>°¡°Ý</td>
+		<td>ê°€ê²©</td>
 		<td colspan="3">
-		<input type="text" name=pPrice value=> ¿ø</td>
+		<input type="text" name=pPrice value=> ì›</td>
 	</tr>
 	<tr>
-		<td>Àç°í·®</td>
+		<td>ìž¬ê³ ëŸ‰</td>
 		<td colspan="3">
-		<input type="text" name=pQuan value=> °³</td>
+		<input type="text" name=pQuan value=> ê°œ</td>
 	</tr>
 
 </table>
-	<input type=submit value="µî ·Ï">
-	<input type="button" value="»óÇ°¸ñ·ÏÀ¸·Î µ¹¾Æ°¡±â" onClick="location.href='GoodList.jsp'";>
+	<input type=submit value="ë“± ë¡">
+	<input type="button" value="ìƒí’ˆëª©ë¡ìœ¼ë¡œ ëŒì•„ê°€ê¸°" onClick="location.href='GoodList.jsp'";>
 </form>
 <br>
 

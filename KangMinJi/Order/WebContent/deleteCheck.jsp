@@ -23,23 +23,11 @@
 	
 	String pProduct = request.getParameter("pProduct");
 	System.out.println("pNum : " + pNum);
-	/* int wishListpNum = Integer.parseInt(productName); */
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	////////////////////////////////////////////////////////
 	String []checksNum = request.getParameterValues("checks");
 	
 	 for(int i=0; i<checksNum.length; i++){
-	
-		// System.out.println("delete dnum : " + dnum[i]);
 			
 		System.out.println("checks i : " + checksNum[i]);
 		DAO dao = new DAO();

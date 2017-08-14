@@ -4,11 +4,25 @@
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
 
-
+<%@ include file="header.jsp" %>
+<script type="text/javascript">
 <%
-	Object id;
-	//String uid="BBEBBE";
-
+		if(session.getAttribute("uId")==null) // 로그인이 안되었을 때
+		        {  %>
+				document.write("들어옴!!");
+					 alert("로그인 하세요!");
+					 history.go(-1);
+		<%	     }
+		        else // 로그인 했을 경우
+		        {%>
+		        	<!--
+		        	id=session.getValue("uId");
+		        	uid=id.toString();
+		        	-->
+		 <%       }
+%>
+</script>
+<%
 	String did = null;
 
 	if (session.getAttribute("uId") != null) {
@@ -17,11 +31,9 @@
 
 	System.out.println("세션 로그 order.jsp userID:" + did);
 	String didCheck = did;
-
-	/* 	String oProduct = request.getParameter("oProduct");
-		String somePrice = request.getParameter("oPrice");
-		String oQuan = request.getParameter("oQuan"); */
 %>
+
+
 <head>
 <title>주문하기</title>
 <meta charset="euc-kr">
@@ -57,8 +69,7 @@
 			<td><%=ovo.getoQuan()%></td>
 			<input type=hidden name=oQuan value="<%=ovo.getoQuan()%>">
 		</tr>
-<%-- 		<input type=hidden name=oNum valuel="<%=ovo.getoNum() %>">
-		<%System.out.println("ordersForm ovo.getoNum() : " + ovo.getoNum()); %> --%>
+
 		<%
 			oPrice += ovo.getoPrice() * ovo.getoQuan();
 					System.out.println("ordersForm oPriced : " + oPrice);

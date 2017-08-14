@@ -1,10 +1,10 @@
 <!-- 
-ìƒí’ˆë¦¬ìŠ¤íŠ¸ë¥¼ ë³´ì—¬ì£¼ëŠ”ê³³ / Good -> Goods / ì´ë¯¸ì§€ë³„ë¡œ ì‚¬ì§„ ì²¨ë¶€ / Btn ì´ë¯¸ì§€ ìˆ˜ì •
+»óÇ°¸®½ºÆ®¸¦ º¸¿©ÁÖ´Â°÷ / Good -> Goods / ÀÌ¹ÌÁöº°·Î »çÁø Ã·ºÎ / Btn ÀÌ¹ÌÁö ¼öÁ¤
  -->
 
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+	pageEncoding="euc-kr"%>
 <jsp:useBean id="shop" class="data.PVO" scope="page" />
 <%@ page import="java.io.PrintWriter"%>
 <%@ page import="data.DAO"%>
@@ -14,7 +14,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>íŒë§¤ ëª©ë¡</title>
+<title>ÆÇ¸Å ¸ñ·Ï</title>
 
 <link rel="stylesheet" type="text/css"
 	href="resources/css/goods_basket.css">
@@ -35,7 +35,7 @@
 		
 	%>
 	
-	<h1 class="bor_btm266 m_bottom20">íŒë§¤ëª©ë¡</h1>
+	<h1 class="bor_btm266 m_bottom20">ÆÇ¸Å¸ñ·Ï</h1>
 	<table border="1">
 		<%
 			DAO dao = new DAO();
@@ -44,10 +44,10 @@
 				PVO pvo = list.get(i);
 		%>
 		<tr>
-			<th>ì œí’ˆ IDë²ˆí˜¸</th>
-			<th>ì œí’ˆ ì´ë¯¸ì§€</th>
-			<th>ì œí’ˆëª…</th>
-			<th>ê°€ê²©</th>
+			<th>Á¦Ç° ID¹øÈ£</th>
+			<th>Á¦Ç° ÀÌ¹ÌÁö</th>
+			<th>Á¦Ç°¸í</th>
+			<th>°¡°Ý</th>
 		</tr>
 		<tr>
 			<td><%=pvo.getpNum()%></td>
@@ -61,7 +61,7 @@
  
  
 			</td>
-			<td><%=pvo.getpPrice()%>ì›</td>
+			<td><%=pvo.getpPrice()%>¿ø</td>
 		</tr>
 		<%
 			}

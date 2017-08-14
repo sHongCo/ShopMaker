@@ -18,7 +18,7 @@ public class OVO {
 	public OVO(){
 		
 	}
-	public OVO(int oNum, String oName, String oId, String oPhone, String oAdd, String oProduct, int oQuan) {
+	public OVO(int oNum, String oName, String oId, String oPhone, String oAdd, String oProduct, int oQuan, int oPrice) {
 		this.oNum = oNum;
 		this.oName = oName;
 		this.oId = oId;
@@ -26,6 +26,7 @@ public class OVO {
 		this.oAdd = oAdd;
 		this.oProduct = oProduct;
 		this.oQuan = oQuan;
+		this.oPrice = oPrice;
 	}
 
 	public int getoNum() {

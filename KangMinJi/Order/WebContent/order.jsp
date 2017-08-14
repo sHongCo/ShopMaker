@@ -1,9 +1,9 @@
-<!--  ÁÖ¹®³»¿ª ÆäÀÌÁö / È¸¿ø°¡ÀÔ Æû¿¡¼­ DBÀÔ·ÂÇÑ °ªÀ» °¡Á®¿Í ³»¿ë Ãâ·ÂÇØÁà¾ß ÇÔ
-	Order_F/ordersForm.jsp¿¡ ºÙ¿©¾ß ÇÔ
+<!--  ì£¼ë¬¸ë‚´ì—­ í˜ì´ì§€ / íšŒì›ê°€ì… í¼ì—ì„œ DBì…ë ¥í•œ ê°’ì„ ê°€ì ¸ì™€ ë‚´ìš© ì¶œë ¥í•´ì¤˜ì•¼ í•¨
+	Order_F/ordersForm.jspì— ë¶™ì—¬ì•¼ í•¨
  -->
 
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
@@ -16,17 +16,14 @@
 		did = (String) session.getAttribute("uId");
 	}
 
-	System.out.println("¼¼¼Ç ·Î±× order.jsp userID:" + did);
+	System.out.println("ì„¸ì…˜ ë¡œê·¸ order.jsp userID:" + did);
 	String didCheck = did;
 
-	String productName = request.getParameter("productNames");
-	int productCount = Integer.parseInt(request.getParameter("productCount"));
-	int productPrice = Integer.parseInt(request.getParameter("pPrice"));
-
+	
 	DAO dao = new DAO();
 	OVO ovo = new OVO();
-	dao.orderCheck(ovo, did, productName, productCount, productPrice);
-	// wishList2 ¿¡¼­ ÁÖ¹®È®ÀÎ ´©¸£¸é orderÅ×ÀÌºí¿¡ ÀúÀå
+
+	// wishList2 ì—ì„œ ì£¼ë¬¸í™•ì¸ ëˆ„ë¥´ë©´ orderí…Œì´ë¸”ì— ì €ì¥
 	/* System.out.println("productName : " + productName);
 	System.out.println("productPrice : " + productPrice);
 	System.out.println("productCount : " + productCount); */
@@ -36,66 +33,38 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
 <title>order.jsp</title>
 </head>
 <body>
-	wishList2.jsp¿¡¼­ °ªÀ» °¡Á®¿Í order Å×ÀÌºí¿¡ °ª ÀúÀå¿Ï·á
-	<h1 class="bor_btm266 m_bottom20">ÁÖ¹® ³»¿ª</h1>
+<%@ include file="header.jsp" %>
+	<h1 class="bor_btm266 m_bottom20">ì£¼ë¬¸ ë‚´ì—­</h1>
 
-	<!--  ¼¼¹øÂ° -->
-	<form action="ordersForm.jsp" method="post">
+	<!--  ì„¸ë²ˆì§¸ -->
 
 		<table width="800" border="1">
-
+		<tr>
+		<td>ì£¼ë¬¸ë²ˆí˜¸</td><td>ì£¼ë¬¸ì </td>	<td>ì£¼ë¬¸í’ˆëª©</td><td>ì£¼ë¬¸ì‹œê°„</td>
+		</tr>
 			<%
-				ArrayList<OVO> list = dao.orderOutputData(did);
+				ArrayList<OVO> list = 	dao.orderCheck(did); 
 				for (int i = 0; i < list.size(); i++) {
 
 					OVO ovo2 = list.get(i);
+					if(i!=list.size()-1){
+						if(list.get(i).getoDate().equals(list.get(i+1).getoDate())){
+						System.out.println("ê°™ì€ ê·¸ë£¹ì˜ ì£¼ë¬¸!");
+						continue;
+						}
+					}
 			%>
-			<tr>
-				<td>°í°´ÀÌ¸§</td>
-				<td colspan="3"><%=ovo2.getoName()%>&nbsp;´Ô</td>
-			</tr>
-
-			<tr>
-				<td>°í°´ID</td>
-				<td colspan="3"><%=ovo2.getoId()%></td>
-			</tr>
-
-			<tr>
-				<td>°í°´ ÀüÈ­¹øÈ£</td>
-				<td colspan="3"><%=ovo2.getoPhone()%></td>
-			</tr>
-
-			<tr>
-				<td>°í°´ÁÖ¼Ò</td>
-				<td colspan="3"><%=ovo2.getoAdd()%></td>
-			</tr>
-
-			<tr>
-				<td>ÁÖ¹®»óÇ°ÀÌ¸§</td>
-				<td colspan="3"><%=ovo2.getoProduct()%></td>
-				<input type=hidden name=oProduct value="<%=ovo2.getoProduct()%>">
-				
-			</tr>
-			<tr>
-				<td>ÁÖ¹®»óÇ°°¡°İ</td>
-				<td colspan="3"><%=ovo2.getoPrice()%> ¿ø</td>
-					<input type=hidden name=oPrice value="<%=ovo2.getoPrice()%>">
-			</tr>
-
-			<tr>
-				<td>ÁÖ¹®¼ö·®</td>
-				<td colspan="3"><%=ovo2.getoQuan()%> °³</td>
-				<input type=hidden name=oQuan value="<%=ovo2.getoQuan()%>">
-			</tr>
-
-
-			<tr>
-				<td>ÁÖ¹®³¯Â¥</td>
+			
+				<td colspan="3"><%=ovo2.getoNum()%>&nbsp;</td>
+				<td colspan="3"><%=ovo2.getoName()%>&nbsp;ë‹˜</td>
+				<td colspan="3"><a href="checkOrder.jsp?oDate=<%=ovo2.getoDate()%>"><%=ovo2.getoProduct()%></a></td>
 				<td colspan="3"><%=ovo2.getoDate()%></td>
+				
+		<tr><td>------------------------------------------------------------</td></tr>
 		</tr>
 
 			<%
@@ -103,8 +72,8 @@
 			%>
 
 		</table>
-		<input type="submit" value="ordersForm.jsp">
-	</form>
+
+
 
 </body>
 </html>

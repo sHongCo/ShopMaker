@@ -37,6 +37,8 @@ public class UserDAO {
 			return -1;// 아이디가 없음
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			DBClose.close(conn);
 		}
 		return -2;// 데이터 베이스 호출
 	}
@@ -56,6 +58,8 @@ public class UserDAO {
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			DBClose.close(conn);
 		}
 		return -1;
 	}

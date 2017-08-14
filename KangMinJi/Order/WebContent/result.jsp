@@ -16,19 +16,19 @@ int oProductCount;
 
 
 
-//¸®Äù½ºÆ® ÆÄ¶ó¹ÌÅÍ ´Ù ¹Ş¾Æ¿À±â.
+//ë¦¬í€˜ìŠ¤íŠ¸ íŒŒë¼ë¯¸í„° ë‹¤ ë°›ì•„ì˜¤ê¸°.
 Enumeration<String> para = request.getParameterNames();
-//para¹è¿­¿¡ ÀÖ´Â °¹¼ö¸¹Å­ while!
+//paraë°°ì—´ì— ìˆëŠ” ê°¯ìˆ˜ë§í¼ while!
 while(para.hasMoreElements()){
-	//name¿¡ ÆÄ¶ó¹ÌÅÍnameÀúÀå.
+	//nameì— íŒŒë¼ë¯¸í„°nameì €ì¥.
 	String names=para.nextElement();
-	//oPriceÆÄ¶ó¹ÌÅÍ°¡ ÀÖÀ¸¸é.
+	//oPriceíŒŒë¼ë¯¸í„°ê°€ ìˆìœ¼ë©´.
 	if(names.equals("oPrice")){
 		oPrice=Integer.parseInt(request.getParameter("oPrice"));	
 		oNum = Integer.parseInt(request.getParameter("oNum"));
 		
-	System.out.println("result oNum : " + oNum); // ¿©±â¼­ ¹ú½á 0ÀÓ getOrder °¥ÇÊ¿ä X
-	}else{//oPrice ÆÄ¶ó¹ÌÅÍ°¡ ¾øÀ¸¸é ovo°´Ã¼¿¡¼­ °¡Á®¿È
+	System.out.println("result oNum : " + oNum); // ì—¬ê¸°ì„œ ë²Œì¨ 0ì„ getOrder ê°ˆí•„ìš” X
+	}else{//oPrice íŒŒë¼ë¯¸í„°ê°€ ì—†ìœ¼ë©´ ovoê°ì²´ì—ì„œ ê°€ì ¸ì˜´
 		oPrice=ovo.getoPrice();
 		oProductCount = ovo.getoQuan();
 	}
@@ -46,71 +46,71 @@ while(para.hasMoreElements()){
 
 
 
-<h1>Á¦Ç° Á¤º¸</h1>
+<h1>ì œí’ˆ ì •ë³´</h1>
 <br />
 <table border=1 width="700px" cellspacing=0>
 
 
 
 	<tr>
-	<td> ÁÖ¹®ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. </td>
+	<td> ì£¼ë¬¸ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. </td>
 	</tr>
 	<tr>
-		<td width="150">ÁÖ¹®¹øÈ£</td>
+		<td width="150">ì£¼ë¬¸ë²ˆí˜¸</td>
 		<td colspan="3"><%=ovo.getoNum()%></td>
 	</tr>
 	<tr>
-		<td>Á¦Ç°¸í</td>
+		<td>ì œí’ˆëª…</td>
 		<td colspan="3"><%=ovo.getoProduct()%></td>
 	</tr>
 	<tr>
-		<td>°áÁ¦±İ¾×</td>
-		<td colspan="3"><%=oPrice%>¿ø</td>
+		<td>ê²°ì œê¸ˆì•¡</td>
+		<td colspan="3"><%=oPrice%>ì›</td>
 	</tr>
 	<tr>
-		<td>ÁÖ¹®ÀÚ</td>
+		<td>ì£¼ë¬¸ì</td>
 		<td colspan="3"><%=ovo.getoName()%></td>
 	</tr>
 
 	<tr>
-		<td>¹è´ŞÁö Á¤º¸</td>
+		<td>ë°°ë‹¬ì§€ ì •ë³´</td>
 		<td colspan="3"><%=ovo.getoAdd() %></td>
 	</tr>
 	<tr>
-		<td>°èÁÂÁ¤º¸</td>
-		<td colspan="3">[±¹¹Î] 310-55-5555112 </td>
+		<td>ê³„ì¢Œì •ë³´</td>
+		<td colspan="3">[êµ­ë¯¼] 310-55-5555112 </td>
 	</tr>
 </table>
- <input type="button" value="»óÇ°¸ñ·ÏÀ¸·Î µ¹¾Æ°¡±â" onClick="location.href='viewGoodList.jsp'";>
+ <input type="button" value="ìƒí’ˆëª©ë¡ìœ¼ë¡œ ëŒì•„ê°€ê¸°" onClick="location.href='viewGoodList.jsp'";>
 
 <br>
  --%>
  
- <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <jsp:useBean id="ovo" class="data.OVO" scope="page" />
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
 
-
  
+<%@ include file="header.jsp" %>
 <%
 int oNum = Integer.parseInt(request.getParameter("oNum"));
 System.out.println(oNum);
 DAO dao = new DAO();
 ovo = dao.getOrder(oNum);
 int oPrice=0;
-//¸®Äù½ºÆ® ÆÄ¶ó¹ÌÅÍ ´Ù ¹Ş¾Æ¿À±â.
+//ë¦¬í€˜ìŠ¤íŠ¸ íŒŒë¼ë¯¸í„° ë‹¤ ë°›ì•„ì˜¤ê¸°.
 Enumeration<String> para = request.getParameterNames();
-//para¹è¿­¿¡ ÀÖ´Â °¹¼ö¸¹Å­ while!
+//paraë°°ì—´ì— ìˆëŠ” ê°¯ìˆ˜ë§í¼ while!
 while(para.hasMoreElements()){
-	//name¿¡ ÆÄ¶ó¹ÌÅÍnameÀúÀå.
+	//nameì— íŒŒë¼ë¯¸í„°nameì €ì¥.
 	String names=para.nextElement();
-	//oPriceÆÄ¶ó¹ÌÅÍ°¡ ÀÖÀ¸¸é.
+	//oPriceíŒŒë¼ë¯¸í„°ê°€ ìˆìœ¼ë©´.
 	if(names.equals("oPrice")){
 		oPrice=Integer.parseInt(request.getParameter("oPrice"));	
-	}else{//oPrice ÆÄ¶ó¹ÌÅÍ°¡ ¾øÀ¸¸é ovo°´Ã¼¿¡¼­ °¡Á®¿È
+	}else{//oPrice íŒŒë¼ë¯¸í„°ê°€ ì—†ìœ¼ë©´ ovoê°ì²´ì—ì„œ ê°€ì ¸ì˜´
 		oPrice=ovo.getoPrice();
 	}
 }
@@ -127,42 +127,42 @@ while(para.hasMoreElements()){
 
 
 
-<h1>Á¦Ç° Á¤º¸</h1>
+<h1>ì œí’ˆ ì •ë³´</h1>
 <br />
 <table border=1 width="700px" cellspacing=0>
 
 
 
 	<tr>
-	<td> ÁÖ¹®ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. </td>
+	<td> ì£¼ë¬¸ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. </td>
 	</tr>
 	<tr>
-		<td width="150">ÁÖ¹®¹øÈ£</td>
+		<td width="150">ì£¼ë¬¸ë²ˆí˜¸</td>
 		<td colspan="3"><%=oNum%></td>
 	</tr>
 	<tr>
-		<td>Á¦Ç°¸í</td>
+		<td>ì œí’ˆëª…</td>
 		<td colspan="3"><%=ovo.getoProduct()%></td>
 	</tr>
 	<tr>
-		<td>°áÁ¦±İ¾×</td>
-		<td colspan="3"><%=oPrice%>¿ø</td>
+		<td>ê²°ì œê¸ˆì•¡</td>
+		<td colspan="3"><%=oPrice%>ì›</td>
 	</tr>
 	<tr>
-		<td>ÁÖ¹®ÀÚ</td>
+		<td>ì£¼ë¬¸ì</td>
 		<td colspan="3"><%=ovo.getoName()%></td>
 	</tr>
 
 	<tr>
-		<td>¹è´ŞÁö Á¤º¸</td>
+		<td>ë°°ë‹¬ì§€ ì •ë³´</td>
 		<td colspan="3"><%=ovo.getoAdd() %></td>
 	</tr>
 	<tr>
-		<td>°èÁÂÁ¤º¸</td>
-		<td colspan="3">[±¹¹Î] 310-55-5555112 </td>
+		<td>ê³„ì¢Œì •ë³´</td>
+		<td colspan="3">[êµ­ë¯¼] 310-55-5555112 </td>
 	</tr>
 </table>
- <input type="button" value="»óÇ°¸ñ·ÏÀ¸·Î µ¹¾Æ°¡±â" onClick="location.href='viewGoodList.jsp'";>
+ <input type="button" value="ìƒí’ˆëª©ë¡ìœ¼ë¡œ ëŒì•„ê°€ê¸°" onClick="location.href='viewGoodList.jsp'";>
 
 <br>
  

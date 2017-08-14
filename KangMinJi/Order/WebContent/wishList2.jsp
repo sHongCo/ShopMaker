@@ -26,13 +26,14 @@
   </script>
 </head>
 <script type="text/javascript">
-document.write("출력!!");
 <%
 if(session.getAttribute("uId")==null) // 로그인이 안되었을 때
         {  %>
+        <!-- 
 		document.write("들어옴!!");
 			 alert("로그인 하세요!");
 			 history.go(-1);
+			 -->
 <%	     }
         else // 로그인 했을 경우
         {%>
@@ -57,10 +58,7 @@ if(session.getAttribute("uId")==null) // 로그인이 안되었을 때
 	System.out.println("세션 로그 wishList2.jsp userID:" + did);
 	String didCheck = did;
 
-	/////////////////////////////////////////////////////////////
-//	int pPrice = Integer.parseInt(request.getParameter("pPrice"));
 	int pPrice ;
-//	int productCount = Integer.parseInt(request.getParameter("oQuan"));
 	int productCount;
 	Enumeration<String> para = request.getParameterNames();
 	
@@ -70,7 +68,6 @@ if(session.getAttribute("uId")==null) // 로그인이 안되었을 때
 	
 	String pProduct = request.getParameter("pProduct");
 	
-//	int wishListpNum = Integer.parseInt(productName);
 	int wishListpNum;
 	
 	DAO dao = new DAO();
@@ -94,16 +91,6 @@ if(session.getAttribute("uId")==null) // 로그인이 안되었을 때
 		
 	}
 	
-	
-	
-
-	//dao.inputData(pvo, pProduct, productCount, pPrice, did);
-	
-	/* 	DAO dao = new DAO();
-		PVO pvo = new PVO();
-	 */
-	
-
 %>
 	<h1 class="bor_btm266 m_bottom20">장바구니 내역</h1>
 

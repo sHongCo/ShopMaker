@@ -13,6 +13,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import data.*;
@@ -63,52 +64,72 @@ public class DAO {
 
 	}
 
-	public void orderCheck(OVO ovo, String oId, String oProduct, int oQuan, int oPrice) {
-
-		String SQL = "INSERT INTO `shop`.`order` (oId, oProduct, oQuan, oPrice) VALUES (?,?,?,?)";
-
+public ArrayList<OVO> orderCheck(String oId) {
+		
+		
+		String sql = "SELECT * from `order` where oId = ?";
+		ArrayList<OVO> alist = new ArrayList<OVO>();
+		PreparedStatement pstmt=null;
+		
+		System.out.println("시작");
 		try {
-			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, oId);
-			pstmt.setString(2, oProduct);
-			pstmt.setInt(3, oQuan);
-			pstmt.setInt(4, oPrice);
-			pstmt.execute();
-			System.out.println("DAO orderCheck 실행 ");
+			rs = pstmt.executeQuery();
+			System.out.println("조회");
+			while (rs.next()) {
+				OVO ovo = new OVO();
+				ovo.setoNum(rs.getInt(1));
+				ovo.setoName(rs.getString(2));
+				ovo.setoId(rs.getString(3));
+				ovo.setoPhone(rs.getString(4));
+				ovo.setoAdd(rs.getString(5));
+				ovo.setoProduct(rs.getString(6));
+				ovo.setoQuan(rs.getInt(7));
+				ovo.setoDate(rs.getTimestamp(8));
+				ovo.setoPrice(rs.getInt(9));
+				alist.add(ovo);
+			}
 		} catch (Exception e) {
-			System.out.println("DAO orderCheck 에러");
-		}
-
+		} 
+		return alist;
 	}
 
-	public ArrayList<OVO> orderOutputData(String did) {
+	public ArrayList<OVO> orderOutputData(String did, Timestamp oDate) {
 
-		String SQL = "SELECT oName, oId, oPhone, oAdd, oProduct, oQuan, oPrice, oDate FROM barony.`order` WHERE oId=?";
+		System.out.println("come");
+		String sql = "SELECT * from `order` where oId = ? and oDate = ?";
 
 		ArrayList<OVO> list = new ArrayList<OVO>();
 		try {
-
-			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			
+			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, did);
-			rs = pstmt.executeQuery();
+		    pstmt.setTimestamp(2, oDate);
+			System.out.println(did);
+		    System.out.println(oDate);
 
+			rs = pstmt.executeQuery();
+			System.out.println(oDate);
 			// Timestamp bDate = resultSet.getTimestamp("bDate");
 
 			while (rs.next()) {
 				OVO ovo = new OVO();
-				ovo.setoName(rs.getString(1));
-				ovo.setoId(rs.getString(2));
-				ovo.setoPhone(rs.getString(3));
-				ovo.setoAdd(rs.getString(4));
-				ovo.setoProduct(rs.getString(5));
-				ovo.setoQuan(rs.getInt(6));
-				ovo.setoPrice(rs.getInt(7));
-				ovo.setoDate(rs.getTimestamp("oDate"));
-
+				ovo.setoNum(rs.getInt(1));
+				ovo.setoName(rs.getString(2));
+				ovo.setoId(rs.getString(3));
+				ovo.setoPhone(rs.getString(4));
+				ovo.setoAdd(rs.getString(5));
+				ovo.setoProduct(rs.getString(6));
+				ovo.setoQuan(rs.getInt(7));
+				ovo.setoDate(rs.getTimestamp(8));
+				ovo.setoPrice(rs.getInt(9));
 				list.add(ovo);
 			}
 
 		} catch (Exception e) {
+			System.out.println("XX");
+
 			// TODO: handle exception
 		}
 
@@ -407,6 +428,7 @@ public class DAO {
 		} catch (Exception e) {
 		} finally {
 			DBClose.close(conn, pstmt, rs);
+			System.out.println("끝");
 		}
 		return alist;
 	}
@@ -439,8 +461,6 @@ public class DAO {
 				System.out.println("완료");
 			}
 		} catch (Exception e) {
-		} finally {
-			DBClose.close(conn, pstmt, rs);
 		}
 		return ovo;
 	}
@@ -448,13 +468,15 @@ public class DAO {
 /********** 관리자 페이지 ********/	
 	//주문목록
 	public ArrayList<OVO> getOrderList() {
-		PreparedStatement pstmt = null;
+		
+		
+		String sql = "SELECT * from `order`";
 		ArrayList<OVO> alist = new ArrayList<OVO>();
+		PreparedStatement pstmt=null;
+		
 		System.out.println("시작");
 		try {
-			String sql = "SELECT * from `order`";
-			pstmt = conn.prepareStatement(sql);
-			
+			pstmt=conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			System.out.println("조회");
 			while (rs.next()) {
@@ -471,11 +493,10 @@ public class DAO {
 				alist.add(ovo);
 			}
 		} catch (Exception e) {
-		} finally {
-			DBClose.close(conn, pstmt, rs);
-		}
+		} 
 		return alist;
 	}
+	
 	
 	//상품목록
 	public ArrayList<PVO> getGoodList(){
