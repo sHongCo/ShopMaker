@@ -1,10 +1,10 @@
 <!-- 
-»óÇ°¸®½ºÆ®¸¦ º¸¿©ÁÖ´Â°÷ / Good -> Goods / ÀÌ¹ÌÁöº°·Î »çÁø Ã·ºÎ / Btn ÀÌ¹ÌÁö ¼öÁ¤
+ìƒí’ˆë¦¬ìŠ¤íŠ¸ë¥¼ ë³´ì—¬ì£¼ëŠ”ê³³ / Good -> Goods / ì´ë¯¸ì§€ë³„ë¡œ ì‚¬ì§„ ì²¨ë¶€ / Btn ì´ë¯¸ì§€ ìˆ˜ì •
  -->
 
 
-<%@ page language="java" contentType="text/html; charset=euc-kr"
-	pageEncoding="euc-kr"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <jsp:useBean id="shop" class="data.PVO" scope="page" />
 <%@ page import="java.io.PrintWriter"%>
 <%@ page import="data.DAO"%>
@@ -14,13 +14,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ÆÇ¸Å ¸ñ·Ï</title>
+<title>íŒë§¤ ëª©ë¡</title>
 
-<link rel="stylesheet" type="text/css"
-	href="resources/css/goods_basket.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+ <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen"> 
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen">
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script> 
+    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+    <script src="js/FF-cash.js" type="text/javascript"></script>  
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script> 
+    <script src="js/hover-image.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>  
+    <script src="js/jquery.bxSlider.js" type="text/javascript"></script> 
+ <script type="text/javascript">
+		$(document).ready(function() {
+			$('#slider-2').bxSlider({
+				pager: true,
+				controls: false,
+				moveSlideQty: 1,
+				displaySlideQty: 4
+			});
+			$("a[data-gal^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+		}); 
+	</script>
+
 
 </head>
-<body>
+<body id="page3">
 	 	<%@ include file="header.jsp" %>
 	<%
 		String pNum = null;
@@ -34,8 +57,42 @@
 		
 		
 	%>
+<!-- /////////////////////////////////////////////// -->	
+	<header>
+	<div class="row-top">
+        	<div class="main">
+            	<div class="wrapper">
+                	<h1><a href="index.html">Catering<span>.com</span></a></h1>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a class="active" href="catalogue.html">Catalogue </a></li>
+                            <li><a href="shipping.html">Shipping</a></li>
+                            <li><a href="faq.html">FAQ </a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row-bot">
+        	<div class="row-bot-bg">
+            	<div class="main">
+                	<h2> <span>Delicious Pizza</span></h2>
+                </div>
+            </div>
+        </div>
 	
-	<h1 class="bor_btm266 m_bottom20">ÆÇ¸Å¸ñ·Ï</h1>
+	</header>
+<!-- /////////////////////////////////////////////// -->	
+	<section id="content">
+		<div class="main">
+			<div class="container">
+			
+	
+	<h3 class="prev-indent-bot">íŒë§¤ëª©ë¡</h3>
+	<div id="slider-2">
 	<table border="1">
 		<%
 			DAO dao = new DAO();
@@ -43,11 +100,27 @@
 			for (int i = 0; i < list.size(); i++) {
 				PVO pvo = list.get(i);
 		%>
-		<tr>
-			<th>Á¦Ç° ID¹øÈ£</th>
-			<th>Á¦Ç° ÀÌ¹ÌÁö</th>
-			<th>Á¦Ç°¸í</th>
-			<th>°¡°İ</th>
+		<div>
+		<div class="p4">
+		<figure><a class="lightbox-image" href="images/1.jpg" data-gal="prettyPhoto[prettyPhoto]">
+		<img alt="" src="images/1.jpg"></a></figure>
+		   <h5><%=pvo.getpProduct()%> </h5>
+                            <!-- <p class="p1">Potato Pizza<br>Cheeze edge Line</p> -->
+                            <p class="p2"><strong class="color-2"><%=pvo.getpPrice()%>ì›</strong></p>
+                            <a class="button-1" href="viewGood.jsp?pNum=<%=pvo.getpNum()%>">Add to Cart</a>
+        </div>
+		</div>
+        
+		
+		
+		
+	
+		
+		<!-- <tr>
+			<th>ì œí’ˆ IDë²ˆí˜¸</th>
+			<th>ì œí’ˆ ì´ë¯¸ì§€</th>
+			<th>ì œí’ˆëª…</th>
+			<th>ê°€ê²©</th>
 		</tr>
 		<tr>
 			<td><%=pvo.getpNum()%></td>
@@ -61,11 +134,17 @@
  
  
 			</td>
-			<td><%=pvo.getpPrice()%>¿ø</td>
-		</tr>
+			<td><%=pvo.getpPrice()%>ì›</td>
+		</tr> 		
+		-->
 		<%
 			}
 		%>
 	</table>
+	</div>
+        </div>
+    	    </div>
+    </section>
+		
 </body>
 </html>
