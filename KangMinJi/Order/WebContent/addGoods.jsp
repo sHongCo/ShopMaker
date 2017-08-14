@@ -1,36 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
 	<jsp:useBean id="pvo" class="data.PVO" scope="page" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%
-		Object id;
-		String uid="BBEBBE";
-        /*if(session.getAttribute("uid") == null) // ·Î±×ÀÎÀÌ ¾ÈµÇ¾úÀ» ¶§
-        {  
-			<script language="javascript">
-			<!--
-			 alert("·Î±×ÀÎ ÇÏ¼¼¿ä!");
-			 history.go(-1);
-			-->
-			</script>
-        }
-        else // ·Î±×ÀÎ ÇßÀ» °æ¿ì
-        {
-        	id=session.getValue("uid");
-        	uid=id.toString();
-        }
-*/
-%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>»óÇ°Ãß°¡</title>
+<title>ìƒí’ˆì¶”ê°€</title>
 </head>
 <body>
-<h1>Á¦Ç° Á¤º¸</h1>
+<%@ include file="header.jsp" %>
+<h1>ì œí’ˆ ì •ë³´</h1>
 <br />
 <table border=1 width="700px" cellspacing=0>
 
@@ -38,25 +20,25 @@
 <form method=post action="addGoodsPro.jsp">
 
 	<tr>
-		<td>Á¦Ç°¸í</td>
+		<td>ì œí’ˆëª…</td>
 		<td colspan="3">
 		<input type="text" name=pProduct value=>
 		</td>
 	</tr>
 	<tr>
-		<td>°¡°Ý</td>
+		<td>ê°€ê²©</td>
 		<td colspan="3">
-		<input type="text" name=pPrice value=> ¿ø</td>
+		<input type="text" name=pPrice value=> ì›</td>
 	</tr>
 	<tr>
-		<td>Àç°í·®</td>
+		<td>ìž¬ê³ ëŸ‰</td>
 		<td colspan="3">
-		<input type="text" name=pQuan value=> °³</td>
+		<input type="text" name=pQuan value=> ê°œ</td>
 	</tr>
 
 </table>
-	<input type=submit value="µî ·Ï">
-	<input type="button" value="»óÇ°¸ñ·ÏÀ¸·Î µ¹¾Æ°¡±â" onClick="location.href='GoodList.jsp'";>
+	<input type=submit value="ë“± ë¡">
+	<input type="button" value="ìƒí’ˆëª©ë¡ìœ¼ë¡œ ëŒì•„ê°€ê¸°" onClick="location.href='GoodList.jsp'";>
 </form>
 <br>
 

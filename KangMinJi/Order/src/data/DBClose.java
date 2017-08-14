@@ -14,6 +14,7 @@ public class DBClose {
 			try {
 				rs.close();
 				rs = null;
+				System.out.println("rsClose");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -24,6 +25,8 @@ public class DBClose {
 			try {
 				pstmt.close();
 				pstmt = null;
+				System.out.println("rsClose");
+
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

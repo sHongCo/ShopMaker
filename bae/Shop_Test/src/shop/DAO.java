@@ -7,11 +7,37 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import shop.DBClose;
+import shop.PVO;
+
+
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
 public class DAO {
 
 	private Connection conn;
 	private ResultSet rs;
 
+<<<<<<< HEAD
+=======
+
+	private static DAO instance = new DAO();
+
+	public static DAO getDao() {
+		return instance;
+	}
+	
+	public String pasing(String data) {
+		try {
+			data = new String(data.getBytes("8859_1"), "euc-kr");
+		} catch (Exception e) {
+		}
+
+		return data;
+	}
+
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
 	public DAO() {
 		try {
 			String dbURL = "jdbc:mysql://localhost:3306/barony";
@@ -22,6 +48,132 @@ public class DAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+<<<<<<< HEAD
+
+	public void deleteWishList(String dnum) {
+
+		String SQL = "DELETE FROM new_table WHERE dnum=?";
+
+=======
+	
+	
+	
+	
+	
+	
+	public OVO getOrder(int oNum) {
+		PreparedStatement pstmt = null;
+		OVO ovo = new OVO();
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
+		try {
+<<<<<<< HEAD
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, dnum);
+			pstmt.executeUpdate();
+
+=======
+			String sql = "SELECT * from `order` where oNum=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, oNum);
+			
+			System.out.println("시작"+oNum);
+			rs = pstmt.executeQuery();
+			System.out.println("전송");
+			while (rs.next()) {				
+				ovo.setoNum(rs.getInt(1));
+				ovo.setoName(rs.getString(2));
+				ovo.setoId(rs.getString(3));
+				ovo.setoPhone(rs.getString(4));
+				ovo.setoAdd(rs.getString(5));
+				ovo.setoProduct(rs.getString(6));
+				ovo.setoQuan(rs.getInt(7));
+				ovo.setoDate(rs.getTimestamp(8));
+				ovo.setoPrice(rs.getInt(9));
+				System.out.println("완료");
+			}
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
+		} catch (Exception e) {
+<<<<<<< HEAD
+
+=======
+		} finally {
+			DBClose.close(conn, pstmt, rs);
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
+		}
+<<<<<<< HEAD
+
+=======
+		return ovo;
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
+	}
+<<<<<<< HEAD
+=======
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void insertOrder(OVO vo) {
+	
+		
+		try {
+			
+			String sql = "INSERT INTO `barony`.`order` ( `oName`, `oId`, `oPhone`, `oAdd`, `oProduct`, `oQuan`,  `oPrice`) VALUES ( ?, ?, ?, ?, ?, ?, ?);";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, pasing(vo.getoName()));
+			pstmt.setString(2, vo.getoId());
+			pstmt.setString(3, vo.getoPhone());
+			pstmt.setString(4, pasing(vo.getoAdd()));
+			pstmt.setString(5, pasing(vo.getoProduct()));
+			pstmt.setInt(6, vo.getoQuan());
+		//	pstmt.setTimestamp(7, vo.getoDate());
+			pstmt.setInt(7, vo.getoPrice());
+            pstmt.executeUpdate();
+           System.out.println("DAO insertOrder 얘 노는거같은데");
+            
+            sql= "SELECT max(oNum) from `order`;";
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            System.out.println("DAO insertOrder 얘는 같이놀고");
+            
+            while(rs.next()){
+            	vo.setoNum(rs.getInt(1));
+            }
+            
+		} catch (Exception e) {
+			System.out.println(vo.getoId());
+		} 
+	}
+		
+	
+	public ArrayList<OVO> getProductList(String uid) {
+		ArrayList<OVO> alist = new ArrayList<OVO>();
+		System.out.println("시작");
+		try {
+			String sql = "SELECT `dname`,`dcount`,`dprice` from `new_table` where did=?";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, uid);
+			rs = pstmt.executeQuery();
+			System.out.println("조회");
+			while (rs.next()) {
+				OVO ovo = new OVO();
+				ovo.setoProduct(rs.getString(1));
+				ovo.setoQuan(rs.getInt(2));
+				ovo.setoPrice(rs.getInt(3));
+				alist.add(ovo);
+			}
+		} catch (Exception e) {
+		} 
+		return alist;
 	}
 
 	public void deleteWishList(String dnum) {
@@ -38,6 +190,7 @@ public class DAO {
 		}
 
 	}
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
 
 	public void orderCheck(OVO ovo, String oId, String oProduct, int oQuan, int oPrice) {
 
@@ -120,7 +273,12 @@ public class DAO {
 	}
 
 	public ArrayList<PVO> getList(int pageNumber) {
+<<<<<<< HEAD
 		String SQL = "SELECT * FROM product";// WHERE pNum < ? ORDER BY bbsID DESC LIMIT 10
+=======
+		String SQL = "SELECT * FROM product";// WHERE pNum < ? ORDER BY bbsID
+												// DESC LIMIT 10
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
 		ArrayList<PVO> list = new ArrayList<PVO>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -164,8 +322,13 @@ public class DAO {
 	/*
 	 * public PVO getProduct(String pProduct){
 	 * 
+<<<<<<< HEAD
 	 * String SQL = "SELECT pNum, pQuan, pPrice FROM product WHERE pProduct=?"; PVO
 	 * pvo = null;
+=======
+	 * String SQL = "SELECT pNum, pQuan, pPrice FROM product WHERE pProduct=?";
+	 * PVO pvo = null;
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
 	 * 
 	 * try { PreparedStatement pstmt = conn.prepareStatement(SQL);
 	 * pstmt.setString(1, pProduct); rs = pstmt.executeQuery();
@@ -217,12 +380,22 @@ public class DAO {
 	 * (Exception e) { e.printStackTrace(); } return ""; }
 	 * 
 	 * 
+<<<<<<< HEAD
 	 * public int write(int pNum, String pProduct, int pQuan ,int pPrice) { String
 	 * SQL = "INSERT INTO BBS VALUES(?, ?, ?, ?, ?)"; try { PreparedStatement pstmt
 	 * = conn.prepareStatement(SQL); pstmt.setInt(1, pNum); pstmt.setString(2,
 	 * pProduct); pstmt.setInt(3, pQuan); pstmt.setInt(4, pPrice); pstmt.setInt(5,
 	 * 1); return pstmt.executeUpdate(); } catch (Exception e) {
 	 * e.printStackTrace(); } return -1; // 데이터베이스 오류 }
+=======
+	 * public int write(int pNum, String pProduct, int pQuan ,int pPrice) {
+	 * String SQL = "INSERT INTO BBS VALUES(?, ?, ?, ?, ?)"; try {
+	 * PreparedStatement pstmt = conn.prepareStatement(SQL); pstmt.setInt(1,
+	 * pNum); pstmt.setString(2, pProduct); pstmt.setInt(3, pQuan);
+	 * pstmt.setInt(4, pPrice); pstmt.setInt(5, 1); return
+	 * pstmt.executeUpdate(); } catch (Exception e) { e.printStackTrace(); }
+	 * return -1; // 데이터베이스 오류 }
+>>>>>>> branch 'master' of https://github.com/winim8/ShopMaker.git
 	 */
 	public int getNest() {
 		String SQL = "SELECT * FROM product ORDER BY pNum DESC";
