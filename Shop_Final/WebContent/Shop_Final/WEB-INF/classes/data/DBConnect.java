@@ -6,9 +6,9 @@ public class DBConnect {
 	
 	public Connection getConnection(){
 		
-		String url = "jdbc:mysql://localhost:3306/shop" + "?useUnicode=true&characterEncoding=euc-kr";
+		String url = "jdbc:mysql://localhost:3306/barony" + "?useUnicode=true&characterEncoding=euc-kr";
 		String id = "root";
-		String pass = "1234";
+		String pass = "aaaa";
 		
 		Connection con = null;
 		

@@ -83,7 +83,7 @@
 				<tr>
 					<td>이메일</td>
 					<td><input type="text" placeholder="이메일" name="uMail1"
-						maxlengh="20">@ <input type="text" name="uMail2"
+						maxlengh="20">@<input type="text" name="uMail2"
 						id="email_domain" class="" style="" /> <select name="email_kind"
 						id="email_kind"
 						onChange="emailChoice(this.value, this.form.email_domain);"
@@ -92,7 +92,8 @@
 							<option value="gmail.com">gmail.com</option>
 							<option value="hanmail.net">hanmail.net</option>
 							<option value="naver.com">naver.com</option>
-					</select>
+					</select></td>
+				</tr>
 				<tr>
 					<td>주소</td>
 					<td><input type="text" placeholder="주소" name="uAdd"
