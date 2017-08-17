@@ -139,10 +139,21 @@
 	</div>
 	</div>
 	</section>
+		<div>
+			<%@ include file="livechat.jsp"%>
+		</div>
+
+
+	<!--==============================footer=================================-->
 	<footer>
 		<div class="main">
 			<div class="aligncenter">
-				<span>#Maker</span>
+				<span>#Maker</span> Website Template by <a class="link"
+					href="http://www.templatemonster.com/" target="_blank"
+					rel="nofollow">TemplateMonster.com</a>
+				<div>
+					<%@ include file="sns.jsp"%>
+				</div>
 			</div>
 		</div>
 	</footer>
