@@ -84,11 +84,11 @@
 		//UVO uvo = dao.getInfo(uId);
 	%>
 	<section id="content">
-		<div class="main">
+			<div class="main">
 	<div class="container">
 		<form name="userInfo" method="post" action="updateAction.jsp">
 			<h3 style="text-align: center;">회원정보 수정</h3>
-			<table>
+			<table style="width: 60%; height: 100px; margin: auto; text-align: center;" >
 				<tr>
 					<td>아이디</td>
 					<td><input type="text" placeholder="아이디" name="uId"
@@ -121,7 +121,7 @@
 
 				<tr>
 					<td>이메일</td>
-					<td><input type="text" placeholder="이메일" name="uMail"
+					<td><input type="email" placeholder="이메일" name="uMail"
 						maxlengh="20" value="<%=UVO.getuMail()%>">
 				</tr>
 				<tr>
@@ -133,8 +133,10 @@
 			<%
 			}
 			%>
+			<center>
 			<input type="submit" value="변경"> <input type="reset"
 				value="초기화"> <a href="main.jsp">취소</a>
+			</center>
 		</form>
 	</div>
 	</div>
