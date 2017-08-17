@@ -128,7 +128,7 @@
 			<div class="row-bot-bg">
 				<div class="main">
 					<h2>
-						<span>이름</span>
+						<span></span>
 					</h2>
 				</div>
 			</div>
