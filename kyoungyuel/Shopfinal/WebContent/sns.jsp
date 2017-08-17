@@ -41,10 +41,6 @@
 
 
 
-	<a href="#"
-		onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url='
-+encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title),
- 'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-		target="_blank" alt="Share on Naver"><img src="images/Naver.png"></a>
+
 </body>
 </html>

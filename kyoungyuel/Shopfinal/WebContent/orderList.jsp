@@ -45,7 +45,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+							<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -62,7 +62,7 @@
 			<div class="row-bot-bg">
 				<div class="main">
 					<h2>
-						<span>이름</span>
+						<span></span>
 					</h2>
 				</div>
 			</div>
@@ -115,7 +115,7 @@
 	}
 	%>
 	<tr>
-		<td>총 매출액</td><td><%=oPrice %></td>
+		<td><b>총 매출액</b></td><td><b><%=oPrice %></b></td>
 	</tr>
 </table>
 
@@ -137,7 +137,7 @@
 		  <footer>
         <div class="main">
         	<div class="aligncenter">
-            	<span>Catering.com &copy; 2012</span>
+            	<span>#Maker</span>
                 Website Template by <a class="link" href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a>
 		<div>
 		<%@ include file = "sns.jsp" %>
