@@ -146,8 +146,6 @@ while(para.hasMoreElements()){
 
 
 
-
-<h3 class="prev-indent-bot">주문이 완료되었습니다!</h3>
 <header>
 		<%
 			String userID = null;
@@ -195,40 +193,45 @@ while(para.hasMoreElements()){
 <section id="content">
 		<div class="main">
 	<div class="container">	
+	<center>
 <table border=1 width="700px" cellspacing=0>
 
 
 
+	
+<center>
+<h3 class="prev-indent-bot">주문이 완료되었습니다!</h3>
+</center>
+	
 	<tr>
-	<td> 주문이 완료되었습니다. </td>
-	</tr>
-	<tr>
-		<td width="150">주문번호</td>
+		<td width="150"><b>주문번호</b></td>
 		<td colspan="3"><%=oNum%></td>
 	</tr>
 	<tr>
-		<td>제품명</td>
+		<td><b>제품명</b></td>
 		<td colspan="3"><%=ovo.getoProduct()%></td>
 	</tr>
 	<tr>
-		<td>결제금액</td>
+		<td><b>결제금액</b></td>
 		<td colspan="3"><%=oPrice%>원</td>
 	</tr>
 	<tr>
-		<td>주문자</td>
+		<td><b>주문자</b></td>
 		<td colspan="3"><%=ovo.getoName()%></td>
 	</tr>
 
 	<tr>
-		<td>배달지 정보</td>
+		<td><b>배달지 정보</b></td>
 		<td colspan="3"><%=ovo.getoAdd() %></td>
 	</tr>
 	<tr>
-		<td>계좌정보</td>
+		<td><b>계좌정보</b></td>
 		<td colspan="3">[국민] 310-55-5555112 </td>
 	</tr>
 </table>
+<br>
  <input type="button" value="상품목록으로 돌아가기" onClick="location.href='viewGoodList.jsp'";>
+</center>
 </div>
 </div>
 </section>
