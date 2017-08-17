@@ -119,13 +119,13 @@
 		<div class="ic"></div>
 		<div class="main">
 			<div class="wrapper img-indent-bot">
-				<article class="col-1">
+				<article class="col-1" style="margin-right: 60px; margin-left: 30px;">
 					<img class="img-border" src="images/banner-1.jpg" alt="">
 				</article>
-				<article class="col-1">
+				<article class="col-1" style="margin-right: 60px;">
 					<img class="img-border" src="images/banner-2.jpg" alt="">
 				</article>
-				<article class="col-2">
+				<article class="col-2" >
 					<img class="img-border" src="images/banner-3.jpg" alt="">
 				</article>
 			</div>
