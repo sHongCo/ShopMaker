@@ -92,23 +92,29 @@ while(para.hasMoreElements()){
 <%@ include file="header.jsp" %>
 
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/reset.css"
-	media="screen">
-<link rel="stylesheet" href="css/style.css" type="text/css"
-	media="screen">
-<link rel="stylesheet" href="css/layout.css" type="text/css"
-	media="screen">
-<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css"
-	media="screen">
-<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
-<script src="js/cufon-yui.js" type="text/javascript"></script>
-<script src="js/cufon-replace.js" type="text/javascript"></script>
-<script src="js/FF-cash.js" type="text/javascript"></script>
-<script src="js/tms-0.3.js" type="text/javascript"></script>
-<script src="js/tms_presets.js" type="text/javascript"></script>
-<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-<script src="js/jquery.equalheights.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+ <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen"> 
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen">
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script> 
  
+    <script src="js/FF-cash.js" type="text/javascript"></script>  
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script> 
+    <script src="js/hover-image.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>  
+    <script src="js/jquery.bxSlider.js" type="text/javascript"></script> 
+ <script type="text/javascript">
+		$(document).ready(function() {
+			$('#slider-2').bxSlider({
+				pager: true,
+				controls: false,
+				moveSlideQty: 1,
+				displaySlideQty: 4
+			});
+			$("a[data-gal^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+		}); 
 <%
 int oNum = Integer.parseInt(request.getParameter("oNum"));
 System.out.println(oNum);
@@ -153,7 +159,7 @@ while(para.hasMoreElements()){
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+						<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -168,20 +174,24 @@ while(para.hasMoreElements()){
 				</div>
 			</div>
 		</div>
-		<div class="row-bot">
-			<div class="row-bot-bg">
-				<div class="main">
-					<h2>
-						<span>이름</span>
-					</h2>
-				</div>
-			</div>
-		</div>
+
+	
+		   <div class="row-bot">
+        	<div class="row-bot-bg">
+            
+          
+                	
+              
+          </div>
+        </div>
+	
+	
+	
+	
+	
 	</header>
 	
-	
 
-<br />
 <section id="content">
 		<div class="main">
 	<div class="container">	
@@ -223,10 +233,15 @@ while(para.hasMoreElements()){
 </div>
 </section>
 
-	  <footer>
+	<div>
+		<%@ include file = "livechat.jsp" %>
+		</div>
+		
+		<!--==============================footer=================================-->
+  <footer>
         <div class="main">
         	<div class="aligncenter">
-            	<span>Catering.com &copy; 2012</span>
+            	<span>#Maker</span>
                 Website Template by <a class="link" href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a>
 		<div>
 		<%@ include file = "sns.jsp" %>
