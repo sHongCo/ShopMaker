@@ -39,7 +39,7 @@
 		<div class="main">
 			<div class="wrapper">
 				<h1>
-					<a href="main.jsp"><span>피자</span>사가라</a>
+		<a href="main.jsp"><span>피자</span>사가라</a>
 				</h1>
 				<nav>
 						<ul class="menu">

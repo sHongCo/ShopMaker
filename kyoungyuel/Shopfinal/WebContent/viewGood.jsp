@@ -76,7 +76,7 @@ if(userID.equals("master")){%>
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+						<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -97,7 +97,7 @@ if(userID.equals("master")){%>
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+				<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<nav>
@@ -123,7 +123,7 @@ if(userID.equals("master")){%>
 							<div class="main">
 								<div class="wrapper">
 									<h1>
-										<a href="main.jsp">이름<span>이름</span></a>
+									<a href="main.jsp"><span>피자</span>사가라</a>
 									</h1>
 								<nav>
 						<ul class="menu">
@@ -248,7 +248,7 @@ if(userID.equals("master")){%>
     <footer>
         <div class="main">
         	<div class="aligncenter">
-            	<span>Catering.com &copy; 2012</span>
+            	<span>#Maker</span>
                 Website Template by <a class="link" href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a>
 		<div>
 		<%@ include file = "sns.jsp" %>

@@ -37,7 +37,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">Catering<span>.com</span></a>
+						<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -66,7 +66,7 @@
 	<footer>
 		<div class="main">
 			<div class="aligncenter">
-				<span>Catering.com &copy; 2012</span>
+				<span>#Maker</span>
 			</div>
 		</div>
 	</footer>

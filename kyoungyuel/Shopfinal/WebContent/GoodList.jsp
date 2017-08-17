@@ -74,7 +74,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+						<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">

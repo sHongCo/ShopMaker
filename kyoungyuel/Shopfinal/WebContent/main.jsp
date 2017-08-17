@@ -39,7 +39,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+						<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -58,7 +58,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+							<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -80,7 +80,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">이름<span>이름</span></a>
+			<a href="main.jsp"><span>피자</span>사가라</a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -116,7 +116,7 @@
 
 	<!--==============================content================================-->
 	<section id="content">
-		<div class="ic">이름3</div>
+		<div class="ic"></div>
 		<div class="main">
 			<div class="wrapper img-indent-bot">
 				<article class="col-1">
