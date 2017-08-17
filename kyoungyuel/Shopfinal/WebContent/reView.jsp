@@ -78,7 +78,7 @@
 		}
 	%> --%>
 	<div>
-		<table>
+		<table border=1 width="500px" cellspacing=0>
 			<thead>
 				<tr>
 					<th>번호</th>
@@ -101,21 +101,21 @@
 					<td><%=list.get(i).getreId()%></td>
 					<td><%=list.get(i).getreDate()%></td>
 					<td><%=list.get(i).getrePoint()%></td>
-					
+
 				</tr>
 				<%
 					}
 					System.out.println("reView pNum : " + pNum2);
-				
 				%>
 			</tbody>
 		</table>
 	</div>
 	<div>
 		<form method="post" action="reWriteAct.jsp?pNum=<%=pNum2%>">
-			<input type="text" class="form-control" placeholder="한 줄 리뷰" name="reContents" maxlength="128"> 
-				<input type="text" class="form-control" placeholder="평점" name="rePoint" 	maxlength="1"> 
-				<input type="submit" class="btn btn-primary" value="확인">
+			<input type="text" class="form-control" placeholder="한 줄 리뷰"
+				name="reContents" maxlength="128"> <input type="text"
+				class="form-control" placeholder="평점" name="rePoint" maxlength="1">
+			<input type="submit" class="btn btn-primary" value="확인">
 		</form>
 	</div>
 </body>
