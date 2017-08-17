@@ -115,7 +115,7 @@
 	}
 	%>
 	<tr>
-		<td>총 매출액</td><td><%=oPrice %></td>
+		<td><b>총 매출액</b></td><td><b><%=oPrice %></b></td>
 	</tr>
 </table>
 

@@ -147,7 +147,7 @@ while(para.hasMoreElements()){
 
 
 
-<h1>제품 정보</h1>
+<h3 class="prev-indent-bot">주문이 완료되었습니다!</h3>
 <header>
 		<%
 			String userID = null;
