@@ -74,7 +74,7 @@
 			<div class="main">
 				<div class="wrapper">
 					<h1>
-						<a href="main.jsp">Catering<span>.com</span></a>
+						<a href="main.jsp">이름<span>이름</span></a>
 					</h1>
 					<nav>
 						<ul class="menu">
@@ -91,7 +91,7 @@
 			<div class="row-bot-bg">
 				<div class="main">
 					<h2>
-						<span>Delicious Pizza</span>
+						<span></span>
 					</h2>
 				</div>
 			</div>
@@ -101,35 +101,7 @@
 		<div class="main">
 	<div class="container">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<h1 class="bor_btm266 m_bottom20">판매목록</h1>
+	<h3 class="prev-indent-bot">판매목록</h3>
 	<table border="1">
 		<tr>
 			<th>제품 ID번호</th>
