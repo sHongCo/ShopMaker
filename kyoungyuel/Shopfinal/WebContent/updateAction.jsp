@@ -10,27 +10,56 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>È¸¿øÁ¤º¸ º¯°æ</title>
+<title>íšŒì›ì •ë³´ ë³€ê²½</title>
 </head>
 <body>
 	<%
 		String uId = null;
 		if (session.getAttribute("uId") != null) {
 			uId = (String) session.getAttribute("uId");
-		} //¼¼¼Ç¿¡ ÀÖ´Â À¯Àú¾ÆÀÌµğ¸¦ ÀúÀå
+		} //ì„¸ì…˜ì— ìˆëŠ” ìœ ì €ì•„ì´ë””ë¥¼ ì €ì¥
 		if (uId == null) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('·Î±×ÀÎÀ» ÇØ¾ß ¾µ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.')");
+			script.println("alert('ë¡œê·¸ì¸ì„ í•´ì•¼ ì“¸ ìˆ˜ ìˆëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤.')");
 			script.println("location.href = 'login.jsp'");
 			script.println("</script>");
-		} //¼¼¼Ç¿¡ id °ªÀÌ ¾øÀ»°æ¿ì = ·Î±×ÀÎÀÌ ¾ÈµÇ¾îÀÖÀ»°æ¿ì
+		} //ì„¸ì…˜ì— id ê°’ì´ ì—†ì„ê²½ìš° = ë¡œê·¸ì¸ì´ ì•ˆë˜ì–´ìˆì„ê²½ìš°
 
-		if (request.getParameter("uId") == null || request.getParameter("uPass") == null
-				|| request.getParameter("uName").equals("") || request.getParameter("uMail").equals("")) {
+	if (UVO.getuPass() == null || UVO.getuPass2() == null) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('ÀÔ·ÂÀÌ ¾È µÈ »çÇ×ÀÌ ÀÖ½À´Ï´Ù.')");
+			script.println("alert('ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”')");
+			script.println("history.back()");
+			script.println("</script>");
+		} else if (!UVO.getuPass().equals(UVO.getuPass2())) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.')");
+			script.println("history.back()");
+			script.println("</script>");
+		} else if (UVO.getuName() == null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”')");
+			script.println("history.back()");
+			script.println("</script>");
+		} else if (UVO.getuPhone() == null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('ì—°ë½ì²˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”')");
+			script.println("history.back()");
+			script.println("</script>");
+		} else if (UVO.getuMail() == null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('ì´ë©”ì¼ì„ ì…ë ¥í•´ì£¼ì„¸ìš”')");
+			script.println("history.back()");
+			script.println("</script>");
+		} else if (UVO.getuAdd() == null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('ì£¼ì†Œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”')");
 			script.println("history.back()");
 			script.println("</script>");
 		} else {
@@ -39,7 +68,7 @@
 			if (result == -1) {
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("alert('È¸¿øÁ¤º¸ º¯°æ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.')");
+				script.println("alert('íšŒì›ì •ë³´ ë³€ê²½ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.')");
 				script.println("history.back()");
 				script.println("</script>");
 			} else {
