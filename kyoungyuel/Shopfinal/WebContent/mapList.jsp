@@ -39,7 +39,7 @@
 		<div class="main">
 			<div class="wrapper">
 				<h1>
-					<a href="main.jsp">Catering<span>.com</span></a>
+					<a href="main.jsp"><span>피자</span>사가라</a>
 				</h1>
 				<nav>
 						<ul class="menu">
@@ -58,7 +58,7 @@
 		<div class="row-bot-bg">
 			<div class="main">
 				<h2>
-					<span>Delicious Pizza</span>
+					<span></span>
 				</h2>
 			</div>
 		</div>
@@ -477,5 +477,23 @@
 			</ul>
 		</form>
 	</div>
+	
+	  <!-- 채팅 -->
+		<div>
+		<%@ include file = "livechat.jsp" %>
+		</div>
+		
+		<!--==============================footer=================================-->
+  <footer>
+        <div class="main">
+        	<div class="aligncenter">
+            	<span>#Maker</span>
+                Website Template by <a class="link" href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a>
+		<div>
+		<%@ include file = "sns.jsp" %>
+		</div>	
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
