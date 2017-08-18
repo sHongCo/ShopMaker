@@ -8,7 +8,23 @@
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<link rel="stylesheet" type="text/css" href="css/reset.css"
+	media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="css/layout.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css"
+	media="screen">
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="js/cufon-yui.js" type="text/javascript"></script>
+<script src="js/cufon-replace.js" type="text/javascript"></script>
 
+<script src="js/FF-cash.js" type="text/javascript"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script src="js/hover-image.js" type="text/javascript"></script>
+<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="js/jquery.bxSlider.js" type="text/javascript"></script>
 <%
 	String did = null;
 
@@ -34,9 +50,107 @@
 
 <title>order.jsp</title>
 </head>
-<body>
-<%@ include file="header.jsp" %>
-	<h1 class="bor_btm266 m_bottom20">주문 내역</h1>
+<%@ include file="header.jsp" %> 
+ <body id="page3">
+	<header>
+	
+	
+		<%
+			String userID = null;
+			if (session.getAttribute("uId") != null) {
+				userID = (String) session.getAttribute("uId");
+			
+			
+if(userID.equals("master")){%>
+			
+			<div class="row-top">
+			<div class="main">
+				<div class="wrapper">
+					<h1>
+						<a href="main.jsp"><span>피자</span>사가라</a>
+					</h1>
+					<nav>
+						<ul class="menu">
+							<li><a href="main.jsp">메인</a></li>
+							<li><a href="GoodList.jsp">재고관리</a></li>
+							<li><a href="orderList.jsp">주문상황</a></li>
+							<li><a class="active" href="viewGoodList.jsp">제품보기</a></li>	
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+			
+			<%
+			}else{
+		%>
+		<div class="row-top">
+			<div class="main">
+				<div class="wrapper">
+					<h1>
+				<a href="main.jsp"><span>피자</span>사가라</a>
+					</h1>
+					<nav>
+						<nav>
+						<ul class="menu">
+							<li><a href="main.jsp">메인</a></li>
+							<li><a class="active" href="viewGoodList.jsp">메뉴</a></li>
+							<li><a href="wishList2.jsp">장바구니</a></li>
+							<li><a href="order.jsp">주문내역</a>
+							<li><a href="mapList.jsp">매장찾기</a></li>
+							
+						</ul>
+					</nav>
+					</nav>
+				</div>
+			</div>
+		</div>
+	
+	
+	<%}
+			}else{%>
+			
+				<div class="row-top">
+							<div class="main">
+								<div class="wrapper">
+									<h1>
+									<a href="main.jsp"><span>피자</span>사가라</a>
+									</h1>
+								<nav>
+						<ul class="menu">
+							<li><a href="main.jsp">메인</a></li>
+							<li><a class="active" href="viewGoodList.jsp">메뉴</a></li>
+							<li><a href="wishList2.jsp">장바구니</a></li>
+							<li><a href="order.jsp">주문내역</a></li>
+							<li><a href="mapList.jsp">매장찾기</a></li>
+							
+						</ul>
+					</nav>
+								</div>
+							</div>
+						</div>
+
+			<%}
+					%>
+	
+	
+	     <div class="row-bot">
+        	<div class="row-bot-bg">
+            
+          
+                	
+              
+          </div>
+        </div>
+	
+
+	
+	</header> 
+
+	<section id="content">
+		<div class="main">
+			<div class="container">	
+	<h3 class="prev-indent-bot">주문 내역</h3>
 
 	<!--  세번째 -->
 
@@ -111,8 +225,11 @@
 			%>
 
 		</table>
-
-
-
-</body>
+		</div>
+		<!-- 채팅 -->
+		<div>
+		<%@ include file = "livechat.jsp" %>
+		</div>
+			</div>
+				</section>
 </html>
