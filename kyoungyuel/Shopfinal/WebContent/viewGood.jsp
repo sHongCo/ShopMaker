@@ -192,14 +192,14 @@ if(userID.equals("master")){%>
                                     <article class="col-2">
                                     <div class="maxheight indent-bot">
    									<form name="myForm" action="quanCheck.jsp" method="post">
-                                    <ul class = "price-list p2">
+                                    <ul class = "price-list p2" style="margin-left: 20;">
                                     
-                                    <li>제품 번호<span><%=pNum%></span></li>
-                                    <li>제품명<span><%=pvo.getpProduct()%></span></li>
-                                    <li>가격<span><%=pvo.getpPrice()%>원</span></li>
+                                    <li><b>제품 번호</b><span><%=pNum%></span></li>
+                                    <li><b>제품명</b><span><%=pvo.getpProduct()%></span></li>
+                                    <li><b>가격<span></b><%=pvo.getpPrice()%>원</span></li>
                                     <div id="error"><%=errMsg%></div> 
-                                    <li>재고량<span><%=pvo.getpQuan()%>개</span></li>
-                                    <li>희망 주문량<span>	
+                                    <li><b>재고량</b><span><%=pvo.getpQuan()%>개</span></li>
+                                    <li><b>희망 주문량</b><span>	
                                     <select name="oQuan">
 										<option value="1">1</option>
 										<option value="2">2</option>

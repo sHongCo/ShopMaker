@@ -51,7 +51,7 @@
 <title>order.jsp</title>
 </head>
 <%@ include file="header.jsp" %> 
- <body id="page3">
+ <body id="page1">
 	<header>
 	
 	
@@ -150,11 +150,13 @@ if(userID.equals("master")){%>
 	<section id="content">
 		<div class="main">
 			<div class="container">	
-	<h3 class="prev-indent-bot">주문 내역</h3>
+				<h3 class="prev-indent-bot">주문 내역</h3>
 
+			<div class="wrapper">			
+				<article class="col-2" >
+				<div class="maxheight indent-bot" >
 	<!--  세번째 -->
 
-		<table width="800" border="1">
 			<%
 			System.out.println(oDate);
 				ArrayList<OVO> list = dao.orderOutputData(did,oDate);
@@ -171,60 +173,48 @@ if(userID.equals("master")){%>
 			<%
 			if(i==0){
 			%>
-			<tr>
-			<table width="600" > 
-			<tr>
-				<td>주문날짜</td>
-				<td colspan="3"><%=ovo2.getoDate()%></td>
-			</tr>
-				<tr>
-				<td>고객이름</td>
-				<td colspan="3"><%=ovo2.getoName()%>&nbsp;님</td>
-			</tr>
-
-			<tr>
-				<td>고객 전화번호</td>
-				<td colspan="3"><%=ovo2.getoPhone()%></td>
-			</tr>
-
-			<tr>
-				<td>고객주소</td>
-				<td colspan="3"><%=ovo2.getoAdd()%></td>
-			</tr>
+			
+			<ul class="price-list p2">
+			<li><b>주문날짜</b><span><%=ovo2.getoDate()%></span></li>
+			<li><b>고객이름</b><span><%=ovo2.getoName()%>&nbsp;님</span></li>
+			<li><b>고객 전화번호</b><span><%=ovo2.getoPhone()%></span></li>
+			<li><b>고객 주소</b><span><%=ovo2.getoAdd()%></span></li></ul>
 			<hr>
-			</table>
-			</tr>
+		
 			<%
 			}
 			System.out.println("gg");
 
 			%>
-			<table width="500" border="1">
+			<table width="300" border="1">
 			<tr>
-				<td>주문번호</td>
-				<td colspan="3"><%=ovo2.getoNum()%></td>
+				<td><b>* &nbsp;주문번호</b></td>
+				<td colspan="3" align="right"><%=ovo2.getoNum()%></td>
 			</tr>
 			<tr>
-				<td>주문상품이름</td>
-				<td colspan="3"><%=ovo2.getoProduct()%></td>
+				<td><b>* &nbsp;주문상품 이름</b></td>
+				<td colspan="3" align="right"><%=ovo2.getoProduct()%></td>
 				
 			</tr>
 			<tr>
-				<td>주문상품가격</td>
-				<td colspan="3"><%=ovo2.getoPrice()%> 원</td>
+				<td><b>* &nbsp;주문상품 가격</b></td>
+				<td colspan="3" align="right"><%=ovo2.getoPrice()%> 원</td>
 			</tr>
 
 			<tr>
-				<td>주문수량</td>
-				<td colspan="3"><%=ovo2.getoQuan()%> 개</td>
+				<td><b>* &nbsp;주문수량</b></td>
+				<td colspan="3" align="right"><%=ovo2.getoQuan()%> 개</td>
 			</tr>
+			</table>
+			<hr>
 				
-</table>
 			<%
 				}
 			%>
 
-		</table>
+		</div>
+		</article>
+		</div>
 		</div>
 		<!-- 채팅 -->
 		<div>
@@ -232,4 +222,34 @@ if(userID.equals("master")){%>
 		</div>
 			</div>
 				</section>
+	<footer>
+		<div class="main">
+			<div class="aligncenter">
+				<span>#Maker</span> Website Template by <a class="link"
+					href="http://www.templatemonster.com/" target="_blank"
+					rel="nofollow">TemplateMonster.com</a>
+				<div>
+					<%@ include file="sns.jsp"%>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		Cufon.now();
+	</script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.slider')._TMS({
+				duration : 1000,
+				easing : 'easeOutQuint',
+				preset : 'slideDown',
+				slideshow : 7000,
+				banners : false,
+				pauseOnHover : true,
+				pagination : true,
+				pagNums : false
+			});
+		});
+	</script>
+</body>
 </html>

@@ -464,11 +464,11 @@ public ArrayList<OVO> orderCheck(String oId) {
 			try {
 			String sql = "INSERT INTO `shop`.`order` ( `oName`, `oId`, `oPhone`, `oAdd`, `oProduct`, `oQuan`, `oDate`, `oPrice`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?);";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, pasing(vo.getoName()));
+			pstmt.setString(1, vo.getoName());
 			pstmt.setString(2, vo.getoId());
 			pstmt.setString(3, vo.getoPhone());
-			pstmt.setString(4, pasing(vo.getoAdd()));
-			pstmt.setString(5, pasing(vo.getoProduct()));
+			pstmt.setString(4, vo.getoAdd());
+			pstmt.setString(5, vo.getoProduct());
 			pstmt.setInt(6, vo.getoQuan());
 			pstmt.setTimestamp(7, vo.getoDate());
 			pstmt.setInt(8, vo.getoPrice());

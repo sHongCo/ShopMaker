@@ -465,7 +465,7 @@ h6 {
 .list-1 li {
 	line-height: 18px;
 	padding: 6px 0 6px 20px;
-	background: url(../images/marker-1.png) 0 12px no-repeat;
+	background: url(../images/marker-2.png) 0 12px no-repeat;
 }
 
 .list-1 a {
@@ -490,10 +490,12 @@ h6 {
 
 .list-2 {
 	width: 270px;
+	margin-left: 10px;
 }
 
 .list-2 dt {
 	font-weight: bold;
+	margin-left: 20px;
 	margin-bottom: 5px;
 }
 

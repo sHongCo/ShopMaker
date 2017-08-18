@@ -97,7 +97,7 @@
 
 
 </head>
-<body id="page3">
+<body id="page1">
 <%@ include file="header.jsp"%>
 	<header>
 	<div class="row-top">
@@ -141,9 +141,7 @@
 
 
 			<div class="wrapper">
-				<article class="col-1">
-				<div class="img-indent-bot"></div>
-				</article>
+			
 				<article class="col-2">
 				<div class="maxheight indent-bot">
 
@@ -163,13 +161,14 @@
 								style="outline-style: text-decoration:none" class="button-1"
 								name="checks" value="<%=dvo.getDnum()%>">삭제
 
-							<li>제품 이름<span><%=dvo.getDname()%></span></li>
+							<li><b>제품 이름</b><span><%=dvo.getDname()%></span></li>
 
-							<li>가격<span><%=dvo.getDprice()%>원</span></li>
+							<li><b>가격</b><span><%=dvo.getDprice()%>원</span></li>
 
 
-							<li>희망주문량<span><%=dvo.getDcount()%>개</span></li>
-
+							<li><b>희망주문량</b><span><%=dvo.getDcount()%>개</span></li>
+							<hr>
+							
 
 
 
@@ -196,6 +195,7 @@
 								}
 							%>
 							<br>
+							</ul>
 							<input type="button" style="outline-style: text-decoration:none"
 								class="button-1" value="주문하기" onclick='mySubmit(1)'>
 							<input type="button" class="button-1" value="삭제"

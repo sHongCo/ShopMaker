@@ -5,7 +5,9 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="data.*"%>
-
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
 
 <%@ include file="header.jsp"%>
 

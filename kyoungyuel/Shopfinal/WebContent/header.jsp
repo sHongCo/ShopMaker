@@ -30,7 +30,7 @@
 			<div>
 				<ul id="login" class="login">
 					<li class="login"><a href="login.jsp">로그인 </a>|
-					<a	href="join.jsp">회원가입</a></li>
+					<a	href="join.jsp" >회원가입</a></li>
 				</ul>
 			</div>
 		</div>
@@ -55,8 +55,8 @@
 						
 						
 						
-			<a href = "update.jsp"> <%=uId%> 님 페이지 &nbsp;&nbsp;</a>
-					 <a href="logoutAction.jsp">&nbsp; LogOut</a> <%
+			<a href = "update.jsp" style = "text-decoration: none;"> <%=uId%> 님 페이지 &nbsp;&nbsp;</a>|
+					 <a href="logoutAction.jsp" style = "text-decoration: none;">&nbsp; LogOut</a> <%
  	}
  %>
 
