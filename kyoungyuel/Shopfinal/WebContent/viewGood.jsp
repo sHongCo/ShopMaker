@@ -167,7 +167,7 @@ if(userID.equals("master")){%>
 			DAO dao3 = new DAO();
 			PVO pvo = dao3.getNum(pNum);
 
-			System.out.println("viewGood pvo.getpNum() : " + pvo.getpNum()); //
+			//System.out.println("viewGood pvo.getpNum() : " + pvo.getpNum()); //
 
 			//int pNum = Integer.parseInt(request.getParameter("pNum"));
 

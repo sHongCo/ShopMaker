@@ -55,9 +55,8 @@
 
 <title>order.jsp</title>
 </head>
-<body>
+<body id= "page1">
 <%@ include file="header.jsp" %>
-	<h1 class="bor_btm266 m_bottom20">주문 내역</h1>
 	<header>
 		<%
 			String userID = null;
@@ -100,6 +99,7 @@
 <div class="main">	
 <div class="container">
 
+		<h3 class="prev-indent-bot">주문상황</h3>
 		<table width="800" border="1">
 		<tr>
 		<td>주문번호</td><td>주문자 </td>	<td>주문품목</td><td>주문시간</td>
@@ -119,16 +119,16 @@
 					}
 			%>
 			
-				<td colspan="3"><%=ovo2.getoNum()%>&nbsp;</td>
-				<td colspan="3"><%=ovo2.getoName()%>&nbsp;님</td>
+				<td><%=ovo2.getoNum()%></td>
+				<td><%=ovo2.getoName()%> 님</td>
 				<% if(count==1){%>
-				<td colspan="3"><a href="checkOrder.jsp?oDate=<%=ovo2.getoDate()%>"><%=ovo2.getoProduct()%></a></td>
+				<td ><a href="checkOrder.jsp?oDate=<%=ovo2.getoDate()%>"><%=ovo2.getoProduct()%></a></td>
 				<% }else{	%>
-				<td colspan="3"><a href="checkOrder.jsp?oDate=<%=ovo2.getoDate()%>"><%=ovo2.getoProduct()%> 외 <%=count-1 %> 개</a></td>
+				<td ><a href="checkOrder.jsp?oDate=<%=ovo2.getoDate()%>"><%=ovo2.getoProduct()%> 외 <%=count-1 %> 개</a></td>
 				<% } %>
-				<td colspan="3"><%=ovo2.getoDate()%></td>
+				<td ><%=ovo2.getoDate()%></td>
 				
-		<tr><td>------------------------------------------------------------</td></tr>
+		</hr>
 		</tr>
 
 			<%
