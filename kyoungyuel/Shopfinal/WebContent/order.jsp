@@ -99,7 +99,7 @@
 <div class="main">	
 <div class="container">
 
-		<h3 class="prev-indent-bot">주문상황</h3>
+		<h3 class="prev-indent-bot">주문내역</h3>
 		<table width="800" border="1">
 		<tr>
 		<td>주문번호</td><td>주문자 </td>	<td>주문품목</td><td>주문시간</td>
