@@ -196,7 +196,7 @@ if(userID.equals("master")){%>
                                     
                                     <li><b>제품 번호</b><span><%=pNum%></span></li>
                                     <li><b>제품명</b><span><%=pvo.getpProduct()%></span></li>
-                                    <li><b>가격<span></b><%=pvo.getpPrice()%>원</span></li>
+                                    <li><b>가격</b><span><%=pvo.getpPrice()%>원</span></li>
                                     <div id="error"><%=errMsg%></div> 
                                     <li><b>재고량</b><span><%=pvo.getpQuan()%>개</span></li>
                                     <li><b>희망 주문량</b><span>	
